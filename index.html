@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UX/UI & Product Designer aus Kiel</title>
+  <meta name="description" content="Portfolio von Moritz Frommelt, UX/UI- und Product Designer aus Kiel: Case Study Fueling Calculator, Bachelorarbeit Second Brain und weitere Arbeiten.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem('theme');
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- S1 · Kopfzeile -->
+  <div class="hero-zone">
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="site-header__name" href="index.html">Moritz Frommelt</a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#cases">Case Studies</a></li>
+          <li><a href="#weitere-projekte">Weitere Projekte</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" hidden aria-pressed="false">
+        <svg class="theme-toggle__icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="theme-toggle__icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span class="theme-toggle__label visually-hidden">Hell</span>
+      </button>
+    </div>
+  </header>
+
+    <!-- S2 · Einstieg -->
+    <section class="hero" aria-labelledby="hero-titel">
+      <div class="container hero__inner">
+        <span class="eyebrow">Moritz Frommelt · UX/UI &amp; Product Designer · Kiel</span>
+        <h1 id="hero-titel">Von Research bis Designsystem, mit Blick für Details und Freude an guten Lösungen.</h1>
+        <div class="hero__actions">
+          <a class="button button--primary" href="https://www.linkedin.com/in/moritzfrommelt" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="button button--secondary" href="#kontakt">Kontakt</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <main id="inhalt">
+
+    <!-- S3 · Case Studies -->
+    <section class="section" id="cases" aria-labelledby="cases-titel">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Case Studies</span>
+          <h2 id="cases-titel">Ausgewählte Projekte</h2>
+        </div>
+
+        <div class="stack-lg">
+          <article class="case-card">
+            <div class="case-card__content">
+              <span class="eyebrow eyebrow--accent">Fueling Calculator</span>
+              <h3><a href="case-fueling-calculator.html">Ein Fueling-Plan für Ausdauersportler:innen</a></h3>
+              <p>Viele Ausdauersportler:innen kennen ihr g/h-Ziel, wissen aber nicht, was
+sie konkret einpacken sollen. Der Fueling Calculator übersetzt die Theorie
+in einen Packplan pro Flasche und Tasche: markenneutral und transparent
+darüber, was geschätzt ist.</p>
+              <ul class="inline-list" aria-label="Merkmale">
+                <li>Mobile App</li>
+                <li>Sport &amp; Ernährung</li>
+                <li>Product Design</li>
+                <li>UX Research</li>
+                <li>Usability-Testing</li>      
+                
+              </ul>
+              <hr class="case-card__divider">
+              <dl class="case-stats">
+                <div class="case-stats__item">
+                  <span class="tag tag--kpi">Ziel-KPI</span>
+                  <dt>≥&nbsp;85&nbsp;%</dt>
+                  <dd>Wizard-Conversion bei wiederholter Nutzung</dd>
+                </div>
+                <div class="case-stats__item">
+                  <span class="tag tag--kpi">Ziel-KPI</span>
+                  <dt>≥&nbsp;50&nbsp;%</dt>
+                  <dd>der Pläne am Tag der Einheit geöffnet</dd>
+                </div>
+                <div class="case-stats__item">
+                  <span class="tag tag--kpi">Ziel-KPI</span>
+                  <dt>≥&nbsp;70&nbsp;%</dt>
+                  <dd>Trust Score: sicher mit der empfohlenen Menge</dd>
+                </div>
+              </dl>
+              <p class="case-stats__note">Zielwerte für den Live-Betrieb, im Projekt definiert und nicht gemessen.</p>
+              <p><a class="button button--primary" href="case-fueling-calculator.html">Case Study lesen <span aria-hidden="true">→</span></a></p>
+            </div>
+            <div class="case-card__media">
+              <img class="screen" src="media/MF2%20–%20Plan%20–%20Übersicht.jpg" width="390" height="848" loading="lazy" decoding="async"
+                   alt="Plan-Übersicht der App: 210 g Kohlenhydrate und 1,5 l Flüssigkeit für eine Tour von 3:30 Stunden, Genauigkeit mittel">
+            </div>
+          </article>
+
+          <article class="case-card case-card--teaser case-card--reverse">
+            <div class="case-card__content">
+              <span class="eyebrow eyebrow--accent">Second Brain</span>
+              <h3>Bachelorarbeit <span class="ph">[PLATZHALTER · Ergebnis-Titel, sobald das Material vorliegt]</span></h3>
+              <p>Ein Anwendungskonzept, das die Second-Brain-Methode durch nutzerzentriertes UX- und UI-Design im Alltag nutzbar machen soll.</p>
+              <ul class="inline-list" aria-label="Merkmale">
+                <li>Second Brain</li>
+                <li>Bachelorarbeit · FH Kiel · 2025</li>
+                <li>Einzelprojekt</li>
+              </ul>
+              <hr class="case-card__divider">
+              <p class="muted"><span class="tag tag--status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Case Study folgt</span></p>
+            </div>
+            <div class="case-card__media">
+              <div class="ph-img" style="--ph-ratio: 4 / 3">Platzhalter · 1600 × 1200 px · Startbildschirm der Second-Brain-Anwendung</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- S4 · Weitere Projekte -->
+    <section class="section section--tint" id="weitere-projekte" aria-labelledby="arbeiten-titel">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Weitere Projekte</span>
+          <h2 id="arbeiten-titel">Was sonst noch entstanden ist</h2>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card work-tile">
+            <img src="media/tile-smart-home-energie.png" width="800" height="500" loading="lazy" decoding="async"
+                 alt="Tablet-Dashboard „Energie Dashboard“: 100 % autark, mit Kacheln zu Erzeugung, Verbrauch, Speicher und Netzeinspeisung sowie einer Wochenstatistik">
+            <span class="eyebrow">Tablet-App</span>
+            <h3>Smart Home Energie Control</h3>
+            <p>Ein Tablet-Dashboard, das Erzeugung, Eigenverbrauch und Netzeinspeisung auf einen Blick zeigt.</p>
+          </article>
+
+          <article class="card work-tile">
+            <img src="media/tile-reise-app.png" width="800" height="500" loading="lazy" decoding="async"
+                 alt="Drei Screens der Reise-App: CO₂-Rechner „Reise Doc“, Auswahl des Transportmittels und Startseite mit Reiseübersicht">
+            <span class="eyebrow">Mobile App</span>
+            <h3>App für nachhaltiges Reisen</h3>
+            <p>Eine App, die den CO₂-Ausstoß einer Reise je Transportmittel vergleichbar macht. Im Team gemeinsam erarbeitet, von Umfragen und Interviews bis zu den ersten Wireframes.</p>
+          </article>
+
+          <article class="card work-tile">
+            <img src="media/tile-shhb-jahrbuecher.png" width="800" height="500" loading="lazy" decoding="async"
+                 alt="Startseite der SHHB-Jahrbücher-Website mit Luftbildbanner und einer klickbaren Karte der Kreise Schleswig-Holsteins">
+            <span class="eyebrow">Website</span>
+            <h3>SHHB Digitale Jahrbücher</h3>
+            <p>Ein Webauftritt-Konzept, das die Jahrbücher des Schleswig-Holsteinischen Heimatbunds über eine Karte der Kreise erschließt. Konzept und Design im Team, die technische Umsetzung der Website lag bei mir.</p>
+          </article>
+
+          <article class="card work-tile">
+            <img src="media/tile-bewaesserung-app.png" width="800" height="500" loading="lazy" decoding="async"
+                 alt="Zwei Wireframe-Screens der App EasyWater: Startseite der Steuerungs-App und Liste der angeschlossenen Pflanzen mit Feuchtigkeitswerten">
+            <span class="eyebrow">Mobile App</span>
+            <h3>Bewässerungs-App</h3>
+            <p>Eine Steuerungs-App für eine Bewässerungsanlage, die ich in einem modulübergreifenden Projekt mitgebaut habe. Vom Papierprototyp bis zum Wireframe.</p>
+          </article>
+
+          <article class="card work-tile">
+            <img src="media/tile-green-data.png" width="800" height="500" loading="lazy" decoding="async"
+                 alt="Upload-Wizard von Green Data, Schritt 2 von 4: Dokumente zur Windkraftanlage hochladen, zwei Dateien sind bereits hinterlegt">
+            <span class="eyebrow">Web-App · UX/UI Challenge</span>
+            <h3>Green Data Inbound-Tool</h3>
+            <p>Ein Upload-Wizard, in dem KI Dokumente ausliest und unsichere Werte zur Bestätigung markiert.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- S5 · Über mich -->
+    <section class="section" id="ueber-mich" aria-labelledby="ueber-titel">
+      <div class="container about">
+        <img class="about__portrait" src="media/profil/pb_komprimiert_v3.jpg" width="412" height="577" loading="lazy" decoding="async"
+             alt="Moritz Frommelt, lächelnd, mit verschränkten Armen vor dunklem Hintergrund">
+        <div class="stack-lg">
+          <div class="section__head">
+            <span class="eyebrow">Über mich</span>
+            <h2 id="ueber-titel">Hallo, ich bin Moritz.</h2>
+          </div>
+          <p>Ich bin UX-/UI-Designer aus Kiel. Angefangen habe ich mit Gestaltung: als Gestaltungstechnischer Assistent und Mediengestalter Digital, dann kam mit dem Studium zum Medieningenieur das Verständnis dafür, wie digitale Produkte entstehen. Praxis habe ich in einer Agentur und einem Softwareunternehmen gesammelt. Mich interessiert der ganze Weg: von der ersten Nutzerfrage über Konzept und Prototyp bis zum Interface, das im Test besteht.</p>
+          <p><a class="button button--secondary" href="ueber-mich.html">Mehr über mich <span aria-hidden="true">→</span></a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- S7 · Kontakt -->
+    <section class="section section--tint" id="kontakt" aria-labelledby="kontakt-titel">
+      <div class="container contact stack-lg">
+        <div class="section__head">
+          <span class="eyebrow">Kontakt</span>
+          <h2 id="kontakt-titel">Lass uns sprechen</h2>
+        </div>
+        <p class="lead">Aktuell suche ich eine Festanstellung als UX/UI- oder Product Designer. Schreib mir.</p>
+        <div class="contact__links">
+          <a class="button button--primary" href="mailto:mail@moritzfrommelt.de">mail@moritzfrommelt.de</a>
+          <a class="button button--secondary" href="https://www.linkedin.com/in/moritzfrommelt" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="button button--secondary" href="unterlagen/Lebenslauf_Moritz-Frommelt_final.pdf">Lebenslauf (PDF)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- S8 · Fußzeile -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© 2026 Moritz Frommelt</p>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="unterlagen/Lebenslauf_Moritz-Frommelt_final.pdf">Lebenslauf (PDF)</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var button = document.querySelector('.theme-toggle');
+      if (!button) return;
+      var label = button.querySelector('.theme-toggle__label');
+      function apply(theme) {
+        root.setAttribute('data-theme', theme);
+        var dark = theme === 'dark';
+        button.setAttribute('aria-pressed', String(dark));
+        label.textContent = dark ? 'Dunkel' : 'Hell';
+        button.setAttribute('aria-label', 'Farbmodus: ' + (dark ? 'Dunkel' : 'Hell') + '. Umschalten');
+      }
+      apply(root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+      button.hidden = false;
+      button.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        apply(next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>
