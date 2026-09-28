@@ -19,6 +19,11 @@ Sortiert nach Wichtigkeit. Zu jedem Punkt die Frage, die ihn auflöst. Erledigte
 | B12 | Farben | Hex-Werte aus Lebenslauf/altem Portfolio | Hast du die genauen Werte für Indigo und Lavendel aus Lebenslauf oder altem Portfolio? |
 | B13 | Case C8 | Gelb-Wert | Gilt #FCDB32 (Moodboard) oder #FFE01B (Case-Datei)? |
 | B14 | Farben | Bühnenfarben Light/Dark | Im Browser prüfen (Schritt 9): passen #E3E5F3 / #2A2D55? |
+| B15 | Case C3, Persona | Bild „Ausschnitt Journey Map“ | Ersetzt das volle Journey-Map-Bild. Ausschnitt liefern: Emotionen bei Berechnung → Prüfung & Zweifel. |
+| B16 | Case C3, Wendepunkt 3 | Bild „Wireframe Übersicht“ | Für den Vorher/Nachher-Vergleich neben dem finalen Übersicht-Screen. Dazu die Bildunterschrift: Was hat sich vom Wireframe zum finalen Screen geändert? |
+| B17 | Case C3, Wendepunkt 4 | Bild „Vorher/Nachher – volle vs. dosierte Transparenz“ | Ersetzt Herleitung- und Bedingungen-Screen. Dazu eine Bildunterschrift ergänzen. |
+| B18 | Case C8, Designsystem | Bild „Token-Übersicht“ | Ersetzt das Moodboard-Bild: Farben mit Rolle, Radius-Regel, zwei Signale (geschätzt vs. editierbar) an einer Komponente. |
+| B19 | Case C6, KI im Prozess | Schreibweise „Perplexity“ | Bestätigen oder korrigieren (bisher unklar, ob „Complexity“ o. ä. gemeint war). |
 
 ## C · Kann vorläufig stehen bleiben
 
@@ -27,6 +32,7 @@ Sortiert nach Wichtigkeit. Zu jedem Punkt die Frage, die ihn auflöst. Erledigte
 | C1 | S3, Karte 2 | Second Brain: Ergebnis-Titel und Bild | Welches Material zur Bachelorarbeit lieferst du, und was war ihr wichtigstes Ergebnis? |
 | C2 | Seite `case-second-brain.html` | Existiert noch nicht | Wann soll der zweite Case ausgebaut werden? |
 | C4 | CLAUDE.md, PROJEKT | Zielgruppe | Ziel (Festanstellung) ist bestätigt. Welche Branchen oder Firmengrößen sprichst du konkret an? |
+| C6 | Case C7, Learnings | Ausblick schon umgesetzt? | Du prüfst noch, ob die antippbare Pille mit Bottom Sheet in der App bereits umgesetzt ist und der Absatz eher nach Kapitel 03 gehört. |
 
 ## Erledigt
 - ~~C3 Einstiegssatz~~ → „Ich bin UX/UI- und Product Designer und gestalte digitale Produkte vom ersten Research bis zum Designsystem.“ (27.09.2026)
@@ -40,5 +46,8 @@ Sortiert nach Wichtigkeit. Zu jedem Punkt die Frage, die ihn auflöst. Erledigte
 - ~~Umfrage selbst durchgeführt?~~ → ja, n = 11 (27.09.2026)
 - ~~Persona-Foto~~ → nicht verwenden, Illustration `grafiken/bike.svg`
 - ~~Widersprüche in den Screens (1,5 l vs. 2,1 l, zweimal „Flasche 1“, 81 g vs. 24 g, „LEUSTUNG“)~~ → in Figma korrigiert (27.09.2026)
-- ~~A10 LinkedIn-URL~~ → https://www.linkedin.com/in/moritzfrommelt, überall verlinkt · ~~A11 Lebenslauf-PDF~~ → finale, bereinigte Fassung `Lebenslauf_Moritz-Frommelt_final.pdf` geliefert und überall ersetzt · ~~A13 Fließtext~~ → mit dem Profiltext der finalen PDF ausgetauscht (28.09.2026)
+- ~~A10 LinkedIn-URL~~ → https://www.linkedin.com/in/moritzfrommelt, überall verlinkt · ~~A11 Lebenslauf-PDF~~ → finale, bereinigte Fassung `Lebenslauf_Moritz-Frommelt_final.pdf` geliefert und überall ersetzt (28.09.2026)
+- ~~A13 Fließtext~~ → doch bei der ursprünglichen Fassung geblieben, auf Wunsch zurückgetauscht (28.09.2026)
 - ~~C5 Antwortzeit~~ → auf Wunsch ganz gestrichen, kein Hinweis mehr (28.09.2026)
+- ~~Alte Lebensläufe (v1, v2)~~ → auf Wunsch gelöscht (28.09.2026)
+- ~~Case-Study überarbeitet, ca. 23 → 7 Bilder~~ → siehe neue Punkte B15–B18 unten (28.09.2026)
