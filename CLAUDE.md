@@ -16,8 +16,7 @@ Moritz arbeitet mit einem 13-Schritte-Masterprogramm (siehe ARBEITSWEISE). Ferti
 1. `impressum.html`/`datenschutz.html` fehlen (Schritt 12).
 2. `case-fueling-calculator.html` bindet `media/moodboard-v3-radius_zugeschnitten_teil2.jpg` ein, die Datei wurde gelöscht (kaputtes Bild; eine `.webp` liegt in `media/webp/`).
 3. Sichtbare Platzhalter und Bildlücken (offene-punkte A5, A9, A14, B15–B19, C1).
-4. Repo-Hygiene: Getrackt sind u. a. `referenzen/` (Screenshots fremder Seiten), `media/persona.jpg` (kein Nutzungsrecht), `unterlagen/altes-Portfolio/`, `konzept.md`, `offene-punkte.md`. Untracked: `.claude/`, `.agents/`, `skills-lock.json`. Vor Aktivierung von Pages mit Moritz klären (`.gitignore` oder eigener Veröffentlichungsordner). Der frühere Lebenslauf mit privaten Daten ist nie committed worden, so lassen.
-5. Lokal liegt `main` zwei Commits hinter `origin` (nur CNAME-Anlegen/Löschen). Vor dem Committen mit Moritz klären, nicht selbst pullen oder pushen.
+4. Repo-Hygiene: Im Repo liegen u. a. `referenzen/` (Screenshots fremder Seiten), `media/persona.jpg` (kein Nutzungsrecht), `unterlagen/altes-Portfolio/`, `konzept.md`, `offene-punkte.md`, Werkzeug-Ordner `.agents/` und `skills-lock.json` (Skills, nicht Teil der Seite) sowie `media/webp/` (Testuploads). `media/webp/moodboard-v3-radius.webp` ist bewusst nicht committet (fremde Bilder). Vor Aktivierung von Pages mit Moritz klären (`.gitignore` oder eigener Veröffentlichungsordner). Der frühere Lebenslauf mit privaten Daten ist nie committed worden, so lassen.
 
 ## ARBEITSWEISE
 - Deutsch, kurz, keine Einleitungen wie „Gerne!", keine Zusammenfassung von Dingen, die er gerade gelesen hat.
@@ -26,6 +25,7 @@ Moritz arbeitet mit einem 13-Schritte-Masterprogramm (siehe ARBEITSWEISE). Ferti
 - Widersprüche ansprechen statt still auflösen (Beispiele aus der Praxis: Datumsangaben zwischen CV und Case, Pfadkonventionen). Vor größeren Änderungen kurz sagen, was kommt; danach in einem Satz, was sich geändert hat.
 - Moritz nutzt kein Terminal und öffnet Dateien per Doppelklick. Nichts installieren; fehlt ein Werkzeug, in einem Satz sagen, was er tun muss. Für Browser-Tests darf ein lokaler Server (`python -m http.server`) kurz laufen und wird danach gestoppt, weil das Vorschaufenster `file://` ohne CSS und Bilder lädt.
 - Löschen nur nach Rückfrage; Bilddateien nie löschen, wenn nur die Einbindung entfällt.
+- Git: Commit/Push nur auf Wunsch, direkt auf `main`. Autor-Adresse repo-lokal die GitHub-noreply-Adresse (`73314151+Moritz-F@users.noreply.github.com`); die globale Git-Adresse ist eine Isogon-Adresse und darf hier nicht verwendet werden. Commits enden mit der Co-Authored-By-Zeile.
 - Quellen der Wahrheit: Inhalte der Case in `referenzen/case-study-fueling-calculator.md` (Zahlen, Entscheidungen), Lebenslauf in `unterlagen/Lebenslauf_Moritz-Frommelt_final.pdf` (bereinigt, öffentlich), Konzept in `konzept.md` (teils überholt, im Zweifel gewinnt der HTML-Stand).
 
 ## AUFBAU
