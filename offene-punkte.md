@@ -24,6 +24,7 @@ Sortiert nach Wichtigkeit. Zu jedem Punkt die Frage, die ihn auflöst. Erledigte
 | B17 | Case C3, Wendepunkt 4 | Bild „Vorher/Nachher – volle vs. dosierte Transparenz“ | Ersetzt Herleitung- und Bedingungen-Screen. Dazu eine Bildunterschrift ergänzen. |
 | B18 | Case C8, Designsystem | Bild „Token-Übersicht“ | Ersetzt das Moodboard-Bild: Farben mit Rolle, Radius-Regel, zwei Signale (geschätzt vs. editierbar) an einer Komponente. |
 | B19 | Case C6, KI im Prozess | Schreibweise „Perplexity“ | Bestätigen oder korrigieren (bisher unklar, ob „Complexity“ o. ä. gemeint war). |
+| B20 | Gesamtes media/ | Schritt 10 (WebP) zurückgestellt | Auf Wunsch vertagt, solange noch Bilder ausgetauscht werden (Prototyp wird überarbeitet). Erst kurz vor Schritt 13 erledigen. |
 
 ## C · Kann vorläufig stehen bleiben
 
