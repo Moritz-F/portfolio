@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fueling Calculator – Case Study · Moritz Frommelt</title>
-  <meta name="description" content="Case Study: Ein markenneutraler Planer, der für eine Radtour berechnet, was in welche Flasche und Trikottasche kommt. Research, Konzept, UI und Test.">
+  <meta name="description" content="Case Study: eine markenneutrale App, die für lange Radtouren plant, was in welche Flasche und Trikottasche kommt. Research, Konzept, UI und Test.">
   <meta name="color-scheme" content="light dark">
   <link rel="stylesheet" href="style.css">
   <script>
@@ -45,13 +45,13 @@
       <div class="container case-hero__inner">
         <a class="breadcrumb" href="index.html#cases"><span aria-hidden="true">←</span> Alle Cases</a>
         <span class="eyebrow">Case Study · Product Design</span>
-        <h1 id="case-titel">Aus 60–90 g pro Stunde wird eine Packliste</h1>
-        <p class="lead">Fueling Calculator – ein Planer, der für eine konkrete Radtour berechnet, wie viel Kohlenhydrate und Flüssigkeit nötig sind, und daraus eine Packliste und eine Mix-Anleitung pro Flasche macht.</p>
+        <h1 id="case-titel">Fueling Calculator</h1>
+        <p class="lead">Eine App, die Ausdauersportler:innen einfach und zuverlässig zeigt, was sie für eine lange Einheit essen und trinken sollten.</p>
         <dl class="meta">
-          <div><dt>Rolle</dt><dd>Einzelprojekt – Research, Konzept, UX/UI-Design, Prototyp und Usability-Test</dd></div>
-          <div><dt>Zeitraum</dt><dd>06.–10.2026, rund vier Monate</dd></div>
-          <div><dt>Kontext</dt><dd>Weiterbildung Product Design, Digitale Leute School</dd></div>
-          <div><dt>Tools</dt><dd>Figma, Figma Slides, Miro · KI: Perplexity, NotebookLM, Claude, Gemini</dd></div>
+          <div><dt>Rolle</dt><dd>Solo – Research, Konzept, UX/UI-Design, Prototyp und Usability-Test</dd></div>
+          <div><dt>Zeitraum</dt><dd>06.–10.2026</dd></div>
+          <div><dt>Kontext</dt><dd>Portfolio-Projekt, Product Design Bootcamp, Digitale Leute</dd></div>
+          <div><dt>Tools</dt><dd>Figma, Figma Slides, Miro · KI-Werkzeuge in <a href="#ki">Kapitel 07</a></dd></div>
         </dl>
         <figure class="figure">
           <div class="stage">
@@ -60,7 +60,7 @@
             <img class="screen" src="media/MF2%20–%20Plan%20–%20Packliste.jpg" width="390" height="844"
                  alt="Packliste: Riegel, Gels und Banane für die Trikottaschen, zwei Flaschen mit Mix, insgesamt 210 g Kohlenhydrate">
           </div>
-          <figcaption class="figure__caption">Links die Übersicht mit den zwei Zahlen, die zählen, rechts die Packliste, nach der man direkt packen kann.</figcaption>
+          <figcaption class="figure__caption">Links die Übersicht mit Zielmenge und Rhythmus, rechts die Packliste, nach der man direkt packen kann.</figcaption>
         </figure>
       </div>
     </section>
@@ -69,34 +69,60 @@
   <main id="inhalt">
 
     <!-- C1b · Auf einen Blick -->
-    <section class="container" aria-labelledby="blick-titel">
-      <div class="glance">
-        <h2 id="blick-titel">Auf einen Blick</h2>
-        <dl>
-          <div>
-            <dt>Problem</dt>
-            <dd>10 von 11 Befragten hatten im letzten Jahr trotz Vorbereitung einen Hungerast oder Magenprobleme. Das Wissen ist da – die Übersetzung auf den konkreten Tag fehlt.</dd>
-          </div>
-          <div>
-            <dt>Lösung</dt>
-            <dd>Ein markenneutraler Planer, der in fünf Schritten eine Packliste erstellt: was in welche Flasche und welche Trikottasche kommt.</dd>
-          </div>
-          <div>
-            <dt>Wichtigste Entscheidung</dt>
-            <dd>Transparenz dosieren statt jede Zahl zu erklären – weil die Testpersonen sonst lange brauchten, bis sie das Ergebnis erfasst hatten.</dd>
-          </div>
-        </dl>
+    <section class="container stack-lg" aria-labelledby="blick-titel">
+      <div class="glance stack-lg">
+        <div>
+          <h2 id="blick-titel">Auf einen Blick</h2>
+          <dl>
+            <div>
+              <dt>Problem</dt>
+              <dd>10 von 11 Befragten hatten im letzten Jahr trotz Vorbereitung einen Hungerast oder Magenprobleme. Das Wissen ist da, die Übersetzung auf den konkreten Tag fehlt.</dd>
+            </div>
+            <div>
+              <dt>Lösung</dt>
+              <dd>Ein markenneutraler Planer, der aus Tour, Wetter und dem eigenen Vorrat in wenigen Minuten eine Packliste macht: was in welche Flasche und welche Trikottasche kommt.</dd>
+            </div>
+            <div>
+              <dt>Wichtigste Erkenntnis</dt>
+              <dd>Transparenz schafft Vertrauen, aber nur dosiert. Im Test kosteten zu viele Kennzeichnungen die Übersicht.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="stack">
+          <h3>So bin ich vorgegangen</h3>
+          <ol class="steps">
+            <li class="steps__item">
+              <span class="eyebrow eyebrow--accent">1 · Research</span>
+              <p>Desk Research, Umfrage (n = 11), 3 Interviews, Hypothesen</p>
+            </li>
+            <li class="steps__item">
+              <span class="eyebrow eyebrow--accent">2 · Konzept</span>
+              <p>Ideation mit drei Ideen, Wettbewerbsanalyse, Customer Journey, User Story Map, KPIs</p>
+            </li>
+            <li class="steps__item">
+              <span class="eyebrow eyebrow--accent">3 · Struktur</span>
+              <p>Sitemap, User Flows, Wireframes, Mid-Fi-Prototyp</p>
+            </li>
+            <li class="steps__item">
+              <span class="eyebrow eyebrow--accent">4 · Test und Hi-Fi</span>
+              <p>Usability-Test, Iteration, Style Tile, Hi-Fi-Prototyp in Figma</p>
+            </li>
+          </ol>
+        </div>
       </div>
 
       <nav class="toc" aria-labelledby="toc-titel">
         <p class="eyebrow" id="toc-titel">Kapitel</p>
         <ol>
           <li><a href="#problem">Problem</a></li>
-          <li><a href="#prozess">Prozess</a></li>
+          <li><a href="#fokus">Fokus</a></li>
           <li><a href="#loesung">Lösung</a></li>
+          <li><a href="#kern-flow">Kern-Flow</a></li>
+          <li><a href="#test">Test</a></li>
+          <li><a href="#impact">Impact und Learnings</a></li>
           <li><a href="#ki">KI im Prozess</a></li>
           <li><a href="#designsystem">Designsystem</a></li>
-          <li><a href="#learnings">Learnings</a></li>
         </ol>
       </nav>
     </section>
@@ -105,40 +131,52 @@
     <section class="chapter" id="problem" aria-labelledby="problem-titel">
       <div class="container">
         <span class="eyebrow chapter__number">01 · Das Problem</span>
-        <h2 id="problem-titel">Das Wissen ist da. Die Übersetzung auf den Tag fehlt.</h2>
-        <!-- TODO: Quelle für "rund 30 %" ergänzen, sonst Satz vor Veröffentlichung streichen -->
-        <p>Viele ambitionierte Hobby-Radfahrer:innen kennen die Empfehlung: 60 bis 90 Gramm Kohlenhydrate pro Stunde. Trotzdem erreichen bei Fahrten über zweieinhalb Stunden nur rund 30 % diese Menge <span class="ph">[BELEG FEHLT · Quelle; ohne Quelle vor Veröffentlichung streichen]</span>. Eine Studie zeigt sogar, dass das Wissen um die Empfehlung nicht vorhersagt, wie viel tatsächlich gegessen wird (Sampson et al., European Journal of Sport Science, 2024).</p>
-        <p>Meine eigene Umfrage unter 11 Ausdauersportler:innen – 10 davon fahren Rennrad oder Gravel – zeigt dasselbe Muster:</p>
+        <h2 id="problem-titel">Die Zielwerte sind bekannt. Der Plan für den Tag fehlt.</h2>
 
-        <div class="grid grid--3">
+        <h3>Was ist Fueling?</h3>
+        <p>Bei langen Ausdauereinheiten verbraucht der Körper vor allem Kohlenhydrate. Seine eigenen Speicher reichen bei höherer Intensität nur etwa anderthalb Stunden. Wer länger unterwegs ist, muss unterwegs nachlegen: typischerweise 60 bis 90 Gramm Kohlenhydrate pro Stunde, über Getränke, Gels, Riegel oder ganz normale Lebensmittel wie Bananen. Dieses gezielte Nachtanken heißt Fueling. Wer zu wenig aufnimmt, bricht ein. Wer zu viel oder das Falsche aufnimmt, bekommt Magenprobleme.</p>
+        <!-- TODO: Speicher-Grafik ergänzen (baut Moritz selbst) -->
+        <figure class="figure">
+          <div class="ph-img">[BILD FOLGT: Speicher-Grafik – die eigenen Speicher sind nach ≈ 90 Minuten leer]</div>
+        </figure>
+
+        <h3>Warum es in der Praxis schwierig wird</h3>
+        <p>Die Zielwerte kennen ambitionierte Hobby-Ausdauersportler:innen meist. Schwierig wird es, wenn daraus ein Plan für eine konkrete Einheit werden soll. Hitze, Intensität und Dauer verändern den Bedarf, und statt teurer Markenprodukte landen oft Supermarktartikel oder selbst gemischte Getränke im Gepäck, deren Kohlenhydratgehalt niemand im Kopf hat.</p>
+
+        <p class="statement">Das Problem ist nicht fehlendes Wissen. Sondern die Übersetzung in die Praxis.</p>
+
+        <div class="grid grid--2">
           <div class="card">
             <span class="stat__value">6 von 11</span>
-            <span class="stat__label">planen schon mit einem Gramm-Ziel pro Stunde. Das Wissen ist da.</span>
+            <span class="stat__label">Befragten verfolgen ein festes Gramm-Ziel pro Stunde.</span>
           </div>
           <div class="card">
-            <span class="stat__value">8 von 11</span>
-            <span class="stat__label">passen ihre Verpflegung selten oder nie an, wenn es heiß wird oder die Fahrt hart.</span>
-          </div>
-          <div class="card">
-            <span class="stat__value">10 von 11</span>
-            <span class="stat__label">hatten im letzten Jahr mindestens einmal Hungerast oder Magenprobleme – trotz Vorbereitung.</span>
+            <span class="stat__value">1 von 11</span>
+            <span class="stat__label">fühlt sich sicher, diese Menge in den eigenen Snacks zu bestimmen.</span>
           </div>
         </div>
         <p><span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Beleg · <span class="tag__detail">eigene Umfrage, n = 11</span></span></p>
+        <p>Bewusst als absolute Zahlen, weil die Stichprobe klein ist. Das Muster deckt sich mit der Forschung: Das Wissen um die Empfehlung sagt nicht vorher, wie viel im Wettkampf tatsächlich gegessen wird (Sampson et al., European Journal of Sport Science, 2024).</p>
+        <blockquote class="quote">
+          <p>„Das Wissen hab ich eigentlich. Aber das Übertragen auf den ganz konkreten Tag mit Hitze und Intensität ist das Wackelige, da rät man dann oft nur noch.“</p>
+          <footer class="muted">Teilnehmer:in, Interview</footer>
+        </blockquote>
 
-        <p>Strecke, Temperatur, Intensität und die Produkte, die gerade zu Hause liegen, machen die Rechnung schwer. Am Ende wird geraten.</p>
-        <p>Deshalb habe ich mich auf ambitionierte Hobby- und Amateurfahrer:innen ohne Betreuerteam konzentriert. Profis haben Betreuer, die genau diese Rechnung übernehmen – Hobbyfahrer:innen stehen damit allein.</p>
+        <h3>Warum bestehende Tools das nicht lösen</h3>
+        <p>Fueling-Rechner gibt es bereits, doch fast alle stammen von Herstellern von Sportnahrung. Sie planen überwiegend mit eigenen Produkten, und aus groben Selbsteinschätzungen werden exakte Werte, die im Ergebnis nicht mehr als Schätzung erkennbar sind. Nutzer:innen bleibt die Frage, ob die Empfehlung ihnen dient oder dem Verkauf.</p>
+
+        <p class="statement">Ein Plan hilft nur, wenn man ihm vertraut. Und Vertrauen entsteht durch Nachvollziehbarkeit.</p>
       </div>
     </section>
 
-    <!-- C3 · Prozess -->
-    <section class="chapter" id="prozess" aria-labelledby="prozess-titel">
+    <!-- C3 · Fokus -->
+    <section class="chapter" id="fokus" aria-labelledby="fokus-titel">
       <div class="container">
-        <span class="eyebrow chapter__number">02 · Prozess</span>
-        <h2 id="prozess-titel">Vier Entscheidungen – und wogegen sie gingen</h2>
-        <p>Vier Entscheidungen haben den Fueling Calculator geformt. Bei jeder stand eine naheliegende Alternative im Raum.</p>
+        <span class="eyebrow chapter__number">02 · Fokus</span>
+        <h2 id="fokus-titel">Für wen ist die Lücke am größten?</h2>
+        <p>In der Research zeigten sich zwei Gruppen. Die eine kennt ihre Zielwerte, scheitert aber daran, sie an wechselnde Bedingungen wie Hitze oder hohe Intensität anzupassen. Die andere will teure Markenprodukte durch Supermarktartikel ersetzen, findet dafür aber keine verlässlichen Angaben. Ich habe mich auf die erste Gruppe konzentriert, weil dort die Unsicherheit am größten war: 6 von 11 Befragten fühlen sich vor langen Einheiten gestresst oder verunsichert, und selbst erfahrene Interviewpartner:innen gaben zu, bei Hitze oft nur zu raten. Das Bedürfnis der zweiten Gruppe verschwindet dabei nicht, es fließt in die Lösung ein: Die App rechnet auch mit Produkten aus dem Supermarkt.</p>
 
-        <!-- Persona -->
+        <!-- Persona: bewusst Illustration statt Foto (keine Bildrechte) -->
         <article class="card persona">
           <div class="persona__avatar">
             <svg viewBox="0 0 224 190" fill="none" aria-hidden="true"><path d="M112 144.376V109.538L81.4 79.6765L122.2 49.8151L142.6 79.6765H163M214 144.376C214 163.617 198.017 179.214 178.3 179.214C158.583 179.214 142.6 163.617 142.6 144.376C142.6 125.135 158.583 109.538 178.3 109.538C198.017 109.538 214 125.135 214 144.376ZM81.4 144.376C81.4 163.617 65.4166 179.214 45.7 179.214C25.9834 179.214 10 163.617 10 144.376C10 125.135 25.9834 109.538 45.7 109.538C65.4166 109.538 81.4 125.135 81.4 144.376ZM152.8 19.9538C152.8 25.4511 148.233 29.9076 142.6 29.9076C136.967 29.9076 132.4 25.4511 132.4 19.9538C132.4 14.4565 136.967 10 142.6 10C148.233 10 152.8 14.4565 152.8 19.9538Z" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -147,207 +185,254 @@
             <span class="eyebrow">Persona</span>
             <h3>Joshua, Rennrad- und Gravelfahrer</h3>
             <p><span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Beleg · <span class="tag__detail">3 Interviews · Umfrage n = 11</span></span></p>
+            <p>Joshua fährt ambitioniert Rennrad und Gravel, trainiert 7 bis 12 Stunden pro Woche und kennt seinen Zielwert. Trotzdem bleibt er vor langen Ausfahrten bei seiner Standard-Routine, weil ihm ein System fehlt, das sie an den Tag anpasst.</p>
             <dl>
-              <div><dt>Situation</dt><dd>Trainiert 7 bis 12 Stunden pro Woche und fährt oft länger als zwei Stunden. Das Problem tritt auf, wenn Hitze oder hohe Intensität dazukommen.</dd></div>
-              <div><dt>Pain Point</dt><dd>Ein Übersetzungsproblem: Er weiß, was er tun sollte, aber nicht, wie er es bei wechselndem Wetter in reale Portionen umrechnet.</dd></div>
+              <div><dt>Bedürfnis 1</dt><dd>Vor der Fahrt keine Rechnungen im Kopf machen.</dd></div>
+              <div><dt>Bedürfnis 2</dt><dd>Sich darauf verlassen können, dass die Verpflegung reicht.</dd></div>
             </dl>
-            <blockquote class="quote">
-              <p>„Das Wissen hab ich eigentlich. Aber das Übertragen auf den ganz konkreten Tag mit Hitze und Intensität ist das Wackelige, da rät man dann oft nur noch.“</p>
-              <footer class="muted">Zitat aus einem Interview</footer>
-            </blockquote>
           </div>
         </article>
 
-        <!-- TODO: Bild "Ausschnitt Journey Map" ergänzen -->
-        <figure class="figure">
-          <div class="ph-img">[BILD FOLGT: Ausschnitt Journey Map, Emotionen bei Berechnung → Prüfung &amp; Zweifel]</div>
-          <figcaption class="figure__caption">Die Journey Map zeigt, wo Zweifel entstehen: nicht bei der Eingabe, sondern beim Blick auf das Ergebnis – „Kann ich einem Rechner mehr trauen als mir selbst?“</figcaption>
-        </figure>
+        <h3>Der Fokusmoment</h3>
+        <p>Der Fokusmoment ist die Planung vor einer langen Radausfahrt. Rad steht stellvertretend für den Ausdauersport: Hier hatte ich den besten Zugang zu Testpersonen, und die Planung vereint viele Variablen auf einmal, nämlich lange Dauer, mehrere Flaschen und begrenzten Platz in den Trikottaschen.</p>
 
-        <!-- Wendepunkt 1 -->
+        <p class="statement">Wie können wir Joshua bei der Planung vor langen Einheiten unterstützen, sein Wissen in die Praxis umzusetzen und Unsicherheit zu reduzieren?</p>
+
+        <p>Mit dieser Frage als Anker begann die Ideation. Die erste Entscheidung ergab sich direkt aus dem Vertrauens-Insight: Die App muss markenneutral sein.</p>
+      </div>
+    </section>
+
+    <!-- C4 · Lösung & MVP -->
+    <section class="chapter" id="loesung" aria-labelledby="loesung-titel">
+      <div class="container">
+        <span class="eyebrow chapter__number">03 · Lösung und MVP</span>
+        <h2 id="loesung-titel">Drei Entscheidungen, jede aus einem Insight</h2>
+
+        <p class="statement">Aus einer offenen Rechenaufgabe wird eine fertige Ansage.</p>
+
+        <div class="grid grid--3">
+          <article class="card stack">
+            <span class="eyebrow">Insight · Übersetzungsproblem</span>
+            <h3>1 · Ein Plan für genau diesen Tag</h3>
+            <p>Das Übersetzungsproblem entsteht, weil jede Einheit anders ist. Die App fragt deshalb nur ab, was sich von Fahrt zu Fahrt ändert: Dauer, Intensität und Wetter. Körperdaten, Verträglichkeit und der eigene Produktvorrat sind im Profil hinterlegt, so dauert die Planung nur wenige Minuten. Das Ergebnis ist keine abstrakte Gramm-Zahl, sondern eine konkrete Ansage, was in welche Flasche und welche Trikottasche kommt.</p>
+          </article>
+          <article class="card stack">
+            <span class="eyebrow">Insight · Hersteller-Rechner</span>
+            <h3>2 · Markenneutral</h3>
+            <p>Weil bestehende Rechner von Herstellern stammen, rechnet die App ausschließlich mit dem, was Nutzer:innen selbst besitzen, vom Gel bis zur Supermarkt-Banane.</p>
+          </article>
+          <article class="card stack">
+            <span class="eyebrow">Insight · Scheingenauigkeit</span>
+            <h3>3 · Nachvollziehbar statt scheingenau</h3>
+            <p>Jede Zahl im Plan lässt sich herleiten. Geschätzte Werte sind als Schätzung erkennbar und sehen nicht aus wie Messwerte.</p>
+          </article>
+        </div>
+
+        <!-- Ideenwahl aus Modul 2 (Quelle: case-study-fueling-calculator.md) -->
         <article class="turn">
-          <h3>Wendepunkt 1 · Welche Idee?</h3>
+          <h3>Was bewusst nicht ins MVP kam</h3>
           <div class="turn__row">
             <span><span class="tag tag--decision"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Entscheidung</span></span>
             <p>Der Tour-Übersetzer: ein situativer Rechner, der für genau eine Fahrt eine Packliste erstellt.</p>
           </div>
           <div class="turn__row turn__rejected">
-            <span><span class="tag tag--rejected"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Verworfen</span></span>
-            <p>Ein Strategie-Baukasten mit gespeicherten Presets und ein Erfahrungs-Logbuch zur Auswertung nach der Fahrt.</p>
+            <span><span class="tag tag--rejected"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Zurückgestellt</span></span>
+            <p>Ein Strategie-Baukasten mit gespeicherten Plänen für wiederkehrende Szenarien und ein Erfahrungs-Logbuch zur Auswertung nach der Fahrt.</p>
           </div>
           <div class="turn__row">
             <span class="eyebrow">Warum</span>
-            <p>Das war das Ergebnis meiner MVP-Erarbeitung. Der Übersetzer löst den Kern-Moment – den Plan vor einer konkreten Tour –, und Baukasten und Logbuch bauen auf ihm auf <span class="ph">[PRÜFEN · stimmt diese Begründung?]</span>. Die beiden anderen Ideen sind als spätere Ausbaustufen vorgesehen. In der Story Map habe ich das MVP auf einen Plan pro Tour geschnitten – Vorlagen, Nachschub unterwegs und Export kommen später.</p>
+            <p>Beide Ideen sind denkbar, ich habe sie fürs MVP aber bewusst zurückgestellt, um mich auf den Moment vor der Fahrt zu konzentrieren.</p>
           </div>
         </article>
 
-        <!-- Wendepunkt 2 -->
-        <article class="turn">
-          <h3>Wendepunkt 2 · Mit welchen Produkten wird gerechnet?</h3>
-          <div class="turn__row">
-            <span><span class="tag tag--decision"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Entscheidung</span></span>
-            <p>Mit dem, was Nutzer:innen besitzen – auch Banane, Feigen und Cola aus dem Supermarkt.</p>
-          </div>
-          <div class="turn__row turn__rejected">
-            <span><span class="tag tag--rejected"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Verworfen</span></span>
-            <p>Ein Produktkatalog einer einzigen Marke.</p>
-          </div>
-          <div class="turn__row">
-            <span class="eyebrow">Warum</span>
-            <p>Der Maurten Fuel Planner plant nur mit eigenen Produkten und verwandelt eine grobe Selbsteinschätzung in exakte Werte, denen man die Schätzung nicht mehr ansieht. Für eine Zielgruppe, der Profi-Produkte oft zu teuer sind, ist das keine Hilfe.</p>
-          </div>
-        </article>
-
-        <!-- Wendepunkt 3 -->
-        <article class="turn">
-          <h3>Wendepunkt 3 · Wo endet das Ergebnis?</h3>
-          <div class="turn__row">
-            <span><span class="tag tag--decision"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Entscheidung</span></span>
-            <p>Bei einer Packliste: was in welche Flasche und welche Trikottasche kommt.</p>
-          </div>
-          <div class="turn__row turn__rejected">
-            <span><span class="tag tag--rejected"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Verworfen</span></span>
-            <p>Eine Gesamtmenge in Gramm pro Stunde.</p>
-          </div>
-          <div class="turn__row">
-            <span class="eyebrow">Warum</span>
-            <p>Eine Zahl muss man wieder selbst übersetzen – genau das Problem, das gelöst werden soll. In der Journey Map ist das Ziel der Moment „Ich muss nicht mehr überlegen, ich packe einfach“.</p>
-          </div>
-        </article>
-
-        <!-- TODO: Bild "Wireframe Übersicht" ergänzen -->
-        <figure class="figure">
-          <div class="stage">
-            <div class="ph-img" style="width: var(--width-screen); --ph-ratio: 390 / 844">[BILD FOLGT: Wireframe Übersicht]</div>
-            <img class="screen" src="media/MF2%20–%20Plan%20–%20Übersicht.jpg" width="390" height="848" loading="lazy" decoding="async"
-                 alt="Plan-Übersicht: 210 g Kohlenhydrate, 1,5 l Flüssigkeit, 60 g pro Stunde, Genauigkeit mittel">
-          </div>
-          <figcaption class="figure__caption"><span class="ph">[PRÜFEN · was hat sich vom Wireframe zum finalen Screen geändert?]</span></figcaption>
-        </figure>
-
-        <!-- Wendepunkt 4 -->
-        <article class="turn">
-          <h3>Wendepunkt 4 · Wie viel Transparenz?</h3>
-          <div class="turn__row turn__rejected">
-            <span><span class="tag tag--rejected"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Verworfen</span></span>
-            <p>Volle Transparenz überall: bei jedem Wert zeigen, ob er geschätzt ist und wie er zustande kommt. Das war mein ursprünglicher Anspruch.</p>
-          </div>
-          <div class="turn__row">
-            <span><span class="tag tag--finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Befund · <span class="tag__detail">Test, 4 Personen</span></span></span>
-            <p>Es hat eine Weile gedauert, bis die Testpersonen das Ergebnis vollständig und korrekt erfasst hatten. Gleichzeitig erzeugten vorbelegte Werte wie Ort und Startzeit Misstrauen, weil ihre Herkunft nicht sichtbar war.</p>
-          </div>
-          <div class="turn__row">
-            <span><span class="tag tag--decision"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Entscheidung</span></span>
-            <p>Transparenz dosieren: sichtbar, wo ein Wert das Ergebnis stark beeinflusst, im Detail erst auf Nachfrage im Tab „Herleitung“.</p>
-          </div>
-          <div class="turn__row">
-            <span class="eyebrow">Warum</span>
-            <p>Schon beim Gestalten und dann im Test habe ich gemerkt, dass Transparenz und schnelles Erfassen gegeneinander arbeiten. Ich musste einen Mittelweg finden. Ort und Startzeit sind jetzt als änderbar gekennzeichnet, und die Wahl zwischen Fertigpulver und Eigenmischung ist ergänzt.</p>
-          </div>
-        </article>
-
-        <!-- TODO: Bild "Vorher/Nachher - volle vs. dosierte Transparenz" ergänzen -->
-        <figure class="figure">
-          <div class="stage">
-            <div class="ph-img">[BILD FOLGT: Vorher/Nachher – volle Transparenz vs. dosierte Transparenz]</div>
-          </div>
-          <figcaption class="figure__caption"><span class="ph">[PRÜFEN · Bildunterschrift ergänzen, sobald das Vorher/Nachher-Bild da ist]</span></figcaption>
-        </figure>
+        <p>Das Ziel: Nutzer:innen verlassen das Haus mit einer begründeten statt geratenen Menge und packen einfach nach Liste. Die drei Entscheidungen prägen jeden Schritt der App. Am deutlichsten werden sie im Kern-Flow, vom Start bis zum fertigen Plan.</p>
       </div>
     </section>
 
-    <!-- C4 · Die Lösung -->
-    <section class="chapter" id="loesung" aria-labelledby="loesung-titel">
+    <!-- C5 · Kern-Flow -->
+    <section class="chapter" id="kern-flow" aria-labelledby="flow-titel">
       <div class="container">
-        <span class="eyebrow chapter__number">03 · Die Lösung</span>
-        <h2 id="loesung-titel">Ein Plan in 2–3 Minuten, nach dem man direkt packen kann</h2>
-        <p>Der Wizard fragt in fünf Schritten nur, was sich pro Tour ändert. Danach zeigt der Plan in vier Tabs, was zu tun ist – und auf Wunsch, warum. Der Wizard geht von der zweiten Nutzung aus: Profil und Vorrat sind gespeichert, abgefragt wird nur, was die Tour betrifft.</p>
+        <span class="eyebrow chapter__number">04 · Kern-Flow</span>
+        <h2 id="flow-titel">Vom Start bis zum fertigen Plan in wenigen Minuten</h2>
+        <p>Joshua will gleich eine Runde von dreieinhalb Stunden fahren. Profil und Vorrat sind gespeichert, er gibt nur ein, was diese Tour betrifft. Die Screens zeigen den getesteten Stand, die Änderungen aus dem Test folgen in Kapitel 05. <span class="ph">[PRÜFEN · durch finale Hi-Fi-Screens mit ≈-Pill ersetzen]</span></p>
+        <!-- TODO: MF2-Screens zeigen noch „GESCHÄTZT“-Badges (Stand vor der Iteration); Master-Story will finale Hi-Fi-Screens -->
+        <!-- TODO: prüfen, ob Wizard-Reihenfolge und Plan-Tabs im finalen Hi-Fi noch stimmen -->
 
         <div class="screens">
           <figure class="figure">
-            <div class="stage"><img class="screen" src="media/MF2%20–%20Wizard%20–%20Intensität%20(vor%20Auswahl).jpg" width="390" height="844" loading="lazy" decoding="async"
-                 alt="Wizard Schritt 4: Wie hart wird gefahren? Auswahl Locker, Zügig, Hart oder Wettkampf, darunter Genauer angeben mit Herzfrequenz oder Leistung"></div>
-            <figcaption class="figure__caption"><strong>Schritt 4 · Intensität wählen.</strong> Statt Watt einzugeben, wählt man, wie sich die Fahrt anfühlen wird – beschrieben über das Sprechen. Das war von Anfang an meine Entscheidung <span class="ph">[PRÜFEN · Begründung: in der Journey Map steht „meine FTP weiß ich gerade nicht“]</span>. Wer Daten hat, kann Herzfrequenz oder Leistung genauer angeben.</figcaption>
+            <div class="stage"><img class="screen" src="media/MF2%20–%20Wizard%20–%20Bedingungen.jpg" width="390" height="844" loading="lazy" decoding="async"
+                 alt="Wizard Schritt 3 von 5, Bedingungen: Wetter am Standort Kiel um 17 Uhr mit 24 °C, 15 km/h Gegenwind und 65 % Luftfeuchtigkeit, darunter Daten anpassen"></div>
+            <figcaption class="figure__caption"><strong>Bedingungen.</strong> Die App fragt nur ab, was sich von Fahrt zu Fahrt ändert. Das Wetter wird automatisch übernommen.</figcaption>
           </figure>
           <figure class="figure">
             <div class="stage"><img class="screen" src="media/MF2%20–%20Wizard%20–%20Produkte%20wählen.jpg" width="390" height="844" loading="lazy" decoding="async"
-                 alt="Wizard Schritt 5: Was steht dir zur Verfügung? Vorrat durchsuchen, Kohlenhydrate in Trinkflaschen, Profi-Produkte und Supermarktprodukte"></div>
-            <figcaption class="figure__caption"><strong>Schritt 5 · Produkte wählen.</strong> Hier wählt man aus dem eigenen Vorrat. Profi- und Supermarktprodukte stehen gleichberechtigt nebeneinander, weil die App an keine Marke gebunden ist.</figcaption>
+                 alt="Wizard-Schritt Produkte: Vorrat durchsuchen, Kohlenhydrate in Trinkflaschen, Profi-Produkte und Supermarktprodukte"></div>
+            <figcaption class="figure__caption"><strong>Vorrat wählen.</strong> Sportprodukte und Supermarktartikel stehen gleichberechtigt nebeneinander. Geplant wird nur mit dem, was da ist.</figcaption>
           </figure>
           <figure class="figure">
-            <div class="stage"><img class="screen" src="media/MF2%20–%20Plan%20–%20Mix.jpg" width="390" height="848" loading="lazy" decoding="async"
-                 alt="Tab Mix: Hinweis, dass nicht alles in die Flaschen passt, darunter je Flasche Maltodextrin, Fruktose, Natrium und Wasser"></div>
-            <figcaption class="figure__caption"><strong>Ergebnis · Mix.</strong> Für jede Flasche steht, wie viel Maltodextrin, Fruktose und Natrium hineinkommen. Passt nicht alles in die Flaschen, sagt die App oben, wie viel auf feste Produkte verlagert wurde.</figcaption>
+            <div class="stage"><img class="screen" src="media/MF2%20–%20Plan%20–%20Übersicht.jpg" width="390" height="848" loading="lazy" decoding="async"
+                 alt="Plan-Übersicht: 210 g Kohlenhydrate, 1,5 l Flüssigkeit, 60 g pro Stunde, Genauigkeit mittel, darunter der Rhythmus der Einnahme"></div>
+            <figcaption class="figure__caption"><strong>Plan-Übersicht.</strong> Die fertige Ansage: Zielmenge pro Stunde, Gesamtmenge und ein Rhythmus für unterwegs.</figcaption>
+          </figure>
+          <figure class="figure">
+            <div class="stage"><img class="screen" src="media/MF2%20–%20Plan%20–%20Packliste.jpg" width="390" height="844" loading="lazy" decoding="async"
+                 alt="Packliste: Riegel, Gels und Banane für die Trikottaschen, zwei Flaschen mit Mix, jede Position zum Abhaken"></div>
+            <figcaption class="figure__caption"><strong>Packliste.</strong> Aus Gramm werden Handgriffe. Jede Position lässt sich beim Packen abhaken.</figcaption>
+          </figure>
+          <figure class="figure">
+            <div class="stage"><img class="screen" src="media/MF2%20–%20Plan%20–%20Herleitung.jpg" width="451" height="848" loading="lazy" decoding="async"
+                 alt="Tab Herleitung: Genauigkeit mittel, Rechenweg für 210 g Kohlenhydrate und 2,1 l Flüssigkeit, Leistung, Temperatur und Schweißrate als geschätzt markiert"></div>
+            <figcaption class="figure__caption"><strong>Herleitung.</strong> Jede Zahl ist nachvollziehbar. Geschätzte Werte sind als solche markiert.</figcaption>
           </figure>
         </div>
+
+        <p>Maßgeblich geprägt hat diesen Flow ein Usability-Test. Seine Leitfrage: Wird der Plan verstanden oder nur angezeigt?</p>
       </div>
     </section>
 
-    <!-- C6 · KI im Prozess -->
+    <!-- C6 · Testing & Iteration -->
+    <section class="chapter" id="test" aria-labelledby="test-titel">
+      <div class="container">
+        <span class="eyebrow chapter__number">05 · Test und Iteration</span>
+        <h2 id="test-titel">Wird der Plan verstanden oder nur angezeigt?</h2>
+
+        <h3>Der Test</h3>
+        <!-- TODO: Anzahl Testpersonen klären (Master-Story: drei, bisher: vier) -->
+        <p>Getestet habe ich den Mid-Fidelity-Prototyp mit drei Personen <span class="ph">[PRÜFEN · drei oder vier Testpersonen?]</span> und einem realistischen Szenario: eine Rennradrunde von gut dreieinhalb Stunden, Profil und Vorrat bereits angelegt, das Getränk diesmal selbst gemischt. Die Testpersonen sollten einen Plan erstellen, erklären, was sie einpacken, und herausfinden, wie die App auf ihren Wert kommt.</p>
+
+        <h3>Was funktionierte</h3>
+        <p>Der Wizard wurde ohne Hilfe abgeschlossen, und die Packliste wurde sofort als Handlungsanweisung gelesen. Das Grundkonzept trägt also.</p>
+
+        <article class="turn">
+          <h3>Der Wendepunkt</h3>
+          <div class="turn__row">
+            <span><span class="tag tag--finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Befund</span></span>
+            <p>Beim Vertrauen zeigte sich etwas anderes. Vorbelegte Werte ohne sichtbare Herkunft erzeugten Misstrauen, und geschätzte Werte waren im Wizard nicht als solche erkennbar.</p>
+          </div>
+          <div class="turn__row turn__rejected">
+            <span><span class="tag tag--rejected"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Verworfen</span></span>
+            <p>Noch mehr kennzeichnen. Das wäre die naheliegende Antwort gewesen, aber schon im Plan zeigte sich, dass die vielen Labels die Übersicht kosten.</p>
+          </div>
+          <div class="turn__row">
+            <span><span class="tag tag--decision"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Entscheidung</span></span>
+            <p>Statt jeden Wert zu kommentieren, trägt ein geschätzter Wert sein Signal jetzt selbst: ein ≈ und eine graue Pill. Eine Legende steht einmal oben. Wer mehr wissen will, tippt auf den Wert und sieht im Bottom Sheet, woher er kommt, was er am Plan verändert und wie man ihn anpassen kann. Die Gramm-Angaben bleiben immer sichtbar.</p>
+          </div>
+        </article>
+
+        <p class="statement">Transparenz schafft Vertrauen, aber nur, solange sie die Übersicht nicht frisst.</p>
+
+        <!-- TODO: Bild "Vorher/Nachher an einem Wert" ergänzen -->
+        <figure class="figure">
+          <div class="ph-img">[BILD FOLGT: Vorher/Nachher an einem Wert – links mit „GESCHÄTZT“-Badge aus dem Mid-Fi, rechts als ≈-Pill im Hi-Fi, daneben das aufgeklappte Bottom Sheet]</div>
+        </figure>
+
+        <h3>Weitere Änderungen</h3>
+        <p>Außerdem wurden Ort und Startzeit als änderbar gekennzeichnet, die Wahl zwischen Fertigpulver und Eigenmischung ergänzt und der GPX-Upload als eigene Karte vor die Eingabefelder gezogen.</p>
+
+        <p>Ob die dosierte Transparenz das Vertrauen tatsächlich stärkt, lässt sich messen. Genau daran setzt der nächste Schritt an.</p>
+      </div>
+    </section>
+
+    <!-- C7 · Impact, Next Step & Learnings -->
+    <section class="chapter" id="impact" aria-labelledby="impact-titel">
+      <div class="container">
+        <span class="eyebrow chapter__number">06 · Impact und Learnings</span>
+        <h2 id="impact-titel">Woran sich der Erfolg messen lässt</h2>
+
+        <p class="statement">Der Plan funktioniert, wenn Nutzer:innen ihm mehr vertrauen als ihrer eigenen Schätzung.</p>
+        <p>Das lässt sich messen. Der Trust Score beobachtet, ob Nutzer:innen die Herleitung öffnen und den Plan danach übernehmen, statt ihn anzupassen oder zu verwerfen. Wer nachschaut und trotzdem übernimmt, hat die Rechnung geprüft und für plausibel befunden. Genau dieses Verhalten soll die App erzeugen.</p>
+
+        <div class="card stack">
+          <dl class="case-stats">
+            <div class="case-stats__item">
+              <span class="tag tag--kpi">Ziel-KPI</span>
+              <dt>≥&nbsp;85&nbsp;%</dt>
+              <dd>Wizard-Conversion bei wiederholter Nutzung</dd>
+            </div>
+            <div class="case-stats__item">
+              <span class="tag tag--kpi">Ziel-KPI</span>
+              <dt>≥&nbsp;50&nbsp;%</dt>
+              <dd>der Pläne am Tag der Einheit geöffnet</dd>
+            </div>
+            <div class="case-stats__item">
+              <span class="tag tag--kpi">Ziel-KPI</span>
+              <dt>≥&nbsp;70&nbsp;%</dt>
+              <dd>Trust Score: sicher mit der empfohlenen Menge</dd>
+            </div>
+          </dl>
+          <p class="case-stats__note">Zielwerte für den Live-Betrieb, im Projekt definiert und nicht gemessen.</p>
+        </div>
+
+        <h3>Nächster Schritt: Aus Schätzungen werden Erfahrungswerte</h3>
+        <p>Viele Werte im Plan sind heute noch Schätzungen, etwa Schweißrate oder Leistung. Der nächste Schritt ist deshalb ein kurzes Feedback nach der Fahrt: Hat die Verpflegung gereicht, gab es Magenprobleme? Mit jeder Fahrt kann die App ihre Schätzungen an die echte Person anpassen. Was heute noch mit ≈ markiert ist, wird mit der Zeit zum Erfahrungswert.</p>
+        <!-- TODO: Grafik "≈-Pill wird zum Erfahrungswert" ergänzen -->
+        <figure class="figure">
+          <div class="ph-img">[BILD FOLGT: Dieselbe ≈-Pill zweimal – grau mit ≈, dann als normaler Wert, dazwischen ein Pfeil „nach 5 Fahrten“]</div>
+        </figure>
+        <p>Vor einer echten Umsetzung würde ich die Berechnungslogik außerdem von ernährungswissenschaftlichen Fachleuten prüfen lassen. Für ein hypothetisches Projekt war das nicht nötig, für ein Produkt, dem Menschen vertrauen sollen, schon.</p>
+
+        <h3>Offene Produktfrage</h3>
+        <p>Offen bleibt, wie sich ein neutrales Tool finanziert. Affiliate-Links oder Partnerschaften mit Herstellern lägen nahe, würden aber genau die Neutralität untergraben, auf der das Vertrauen aufbaut.</p>
+
+        <h3>Was ich mitnehme</h3>
+        <div class="grid grid--2">
+          <div class="card stack">
+            <h4>Transparenz braucht Dosierung</h4>
+            <p>Mehr Information erzeugt nicht automatisch mehr Vertrauen. Entscheidend ist, was sofort sichtbar ist und was erst auf Nachfrage erscheint.</p>
+          </div>
+          <div class="card stack">
+            <h4>Fokus auf einen Moment</h4>
+            <p>Die Beschränkung auf die Planung vor der Fahrt hat das MVP erst möglich gemacht.</p>
+          </div>
+        </div>
+
+        <p class="statement">Das Wissen war immer da. Jetzt kommt es auch unterwegs an.</p>
+      </div>
+    </section>
+
+    <!-- C8 · KI im Prozess -->
     <section class="chapter" id="ki" aria-labelledby="ki-titel">
       <div class="container">
-        <span class="eyebrow chapter__number">04 · KI im Prozess</span>
-        <h2 id="ki-titel">KI als Sparringspartner – die Entscheidungen blieben bei mir</h2>
-        <p>KI war durchgehend mein Sparringspartner, um schneller zu werden. Jedes Ergebnis habe ich selbst hinterfragt, bevor ich es übernommen habe.</p>
-        <div class="grid grid--3">
-          <div class="card stack"><h3>Perplexity <span class="ph">[PRÜFEN · Schreibweise]</span></h3><p>Desk Research</p></div>
-          <div class="card stack"><h3>NotebookLM</h3><p>Interviews und Umfrage auswerten</p></div>
-          <div class="card stack"><h3>Claude und Gemini</h3><p>Sparring über den ganzen Prozess</p></div>
-          <div class="card stack"><h3>KI-Agents in Figma</h3><p>Unterstützung beim Gestalten</p></div>
+        <span class="eyebrow chapter__number">07 · KI im Prozess</span>
+        <h2 id="ki-titel">KI hat beschleunigt, die Entscheidungen blieben bei mir</h2>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead>
+              <tr><th scope="col">Tool</th><th scope="col">Einsatz</th><th scope="col">Ergebnis</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Perplexity</th><td>Desk Research</td><td>Studien mit prüfbaren Quellen</td></tr>
+              <tr><th scope="row">NotebookLM</th><td>Interviews und Umfrage auswerten</td><td>Jede Erkenntnis bis zur Quelle rückverfolgbar</td></tr>
+              <tr><th scope="row">Claude</th><td>Sparring im gesamten Projekt</td><td>Geschärfte Hypothesen und Entscheidungen</td></tr>
+              <tr><th scope="row">Claude, Google Stitch, Figma Make, Figma Agent</th><td>Frühe Screen-Ideen</td><td>Mehrere Richtungen in kurzer Zeit</td></tr>
+            </tbody>
+          </table>
         </div>
+        <p>Studien aus Perplexity habe ich selbst an der Quelle geprüft, die Auswertung von NotebookLM bis zur Originalaussage zurückverfolgt und danach selbst interpretiert und geclustert. Das finale Design ist in Figma entstanden.</p>
+        <p class="statement">Ich habe KI so eingesetzt, wie die App funktionieren soll: nachvollziehbar.</p>
       </div>
     </section>
 
-    <!-- C8 · Designsystem -->
+    <!-- C9 · Designsystem (nur Webseite, Quelle: case-study-fueling-calculator.md) -->
     <section class="chapter" id="designsystem" aria-labelledby="ds-titel">
       <div class="container">
-        <span class="eyebrow chapter__number">05 · Designsystem der App</span>
+        <span class="eyebrow chapter__number">08 · Designsystem der App</span>
         <h2 id="ds-titel">Drei Farben, zwei Radien, zwei Signale</h2>
-        <p>Jede Regel im Designsystem der App hat einen Grund.</p>
+        <p>Auch das Designsystem folgt dem Vertrauens-Insight: Unsicherheit bekommt ein eigenes, eindeutiges Zeichen.</p>
         <div class="grid grid--2">
           <div class="card stack"><h3>Farben mit Aufgabe</h3><p>Tinte gibt Struktur, Gelb zeigt das Ergebnis, Grau zeigt Unsicherheit. Gelb ist nie Textfarbe, nur Markerfläche hinter dunklem Text <span class="ph">[PRÜFEN · Gelb #FCDB32 (Moodboard) oder #FFE01B (Case-Datei)?]</span>.</p></div>
           <div class="card stack"><h3>Radius nach Interaktion</h3><p>Radius 0 für alles, was man liest; voll gerundet für alles, was man antippt. So erkennt man ohne Nachdenken, was interaktiv ist.</p></div>
-          <div class="card stack"><h3>Zwei getrennte Signale</h3><p>Eine graue Fläche heißt „geschätzt“, ein Rahmen heißt „editierbar“. Beide bleiben getrennt, weil ein Wert geschätzt und trotzdem nicht änderbar sein kann – oder umgekehrt.</p></div>
+          <div class="card stack"><h3>Zwei getrennte Signale</h3><p>Eine graue Fläche heißt „geschätzt“, ein Rahmen heißt „editierbar“. Beide bleiben getrennt, weil ein Wert geschätzt und trotzdem nicht änderbar sein kann, oder umgekehrt.</p></div>
           <div class="card stack"><h3>Typografie</h3><p>Archivo Expanded Bold für Zahlen und Überschriften, Archivo für Text.</p></div>
         </div>
-        <!-- TODO: Bild "Token-Uebersicht" ergaenzen -->
+        <!-- TODO: Bild "Token-Übersicht" ergänzen; das frühere Moodboard-Bild ist entfernt (Datei gelöscht, fremde Bilder) -->
         <figure class="figure">
           <div class="ph-img">[BILD FOLGT: Token-Übersicht – Farben mit Rolle, Radius-Regel, zwei Signale (geschätzt vs. editierbar) an einer Komponente]</div>
         </figure>
-        <figure class="figure">
-          <img src="media/moodboard-v3-radius_zugeschnitten_teil2.jpg" width="1029" height="701" loading="lazy" decoding="async"
-               alt="Markenwerte Dynamic, Precise, Honest, Bold neben Komponenten: Tabbar, Datenzeilen, Eingabefeld, Button und Fortschrittsbalken">
-          <figcaption class="figure__caption">Die Komponenten zeigen die Radius-Regel: eckige Datenzeilen, runde Buttons und Tabs.</figcaption>
-        </figure>
       </div>
     </section>
 
-    <!-- C7 · Learnings -->
-    <section class="chapter" id="learnings" aria-labelledby="learnings-titel">
-      <div class="container">
-        <span class="eyebrow chapter__number">06 · Learnings</span>
-        <h2 id="learnings-titel">Was ich mitnehme</h2>
-        <div class="grid grid--2">
-          <div class="card stack">
-            <h3>Transparenz braucht eine Dosis</h3>
-            <p>Wer jeden Wert erklärt, macht das Ergebnis schwerer lesbar. Entscheidend ist, wo die Erklärung steht – und dass sie auf Nachfrage da ist.</p>
-          </div>
-          <div class="card stack">
-            <h3>Was ich anders machen würde</h3>
-            <p><span class="ph">[PLATZHALTER · Was ich beim nächsten Mal anders machen würde – in einem Satz, den ich im Gespräch vertreten kann]</span></p>
-          </div>
-        </div>
-        <!-- TODO: pruefen, ob "Ausblick" (antippbare Pille + Bottom Sheet) schon umgesetzt ist und ggf. in Kapitel 03 verschieben -->
-        <div class="stack">
-          <h3>Ausblick</h3>
-          <p>Geschätzte Werte werden selbst zur antippbaren Pille; ein Bottom Sheet erklärt, woher der Wert kommt, wie stark er wirkt und wie man ihn anpasst. Strategie-Baukasten und Erfahrungs-Logbuch sind die nächsten Ausbaustufen.</p>
-          <h3>Ungelöst</h3>
-          <p>Monetarisierung. Affiliate- oder Partnermodelle würden die Markenneutralität untergraben – eine gute Antwort habe ich noch nicht.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- C11 · Abschluss -->
+    <!-- C10 · Abschluss -->
     <section class="section section--tint" id="kontakt" aria-labelledby="abschluss-titel">
       <div class="container stack-lg">
         <div class="section__head">

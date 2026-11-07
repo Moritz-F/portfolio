@@ -1,6 +1,6 @@
 # CLAUDE.md – Portfolio Moritz Frommelt
 
-Stand: 07.10.2026. Diese Datei ist verbindlich. Aktuelle offene Punkte: `offene-punkte.md` (maßgeblich, nicht hier duplizieren).
+Stand: 07.11.2026. Diese Datei ist verbindlich. Aktuelle offene Punkte: `offene-punkte.md` (maßgeblich, nicht hier duplizieren).
 
 ## PROJEKT
 Statische Portfolio-Website für Moritz Frommelt, UX-/UI- und Product Designer aus Kiel (B.Eng. Medieningenieur, Weiterbildung Product Design bei Digitale Leute). Hauptcase: Fueling Calculator; zweiter Case (Bachelorarbeit Second Brain) ist nur als Karte angedeutet. Zielgruppe: Recruiterinnen und Design Leads, die in rund zwei Minuten verstehen wollen, welches Problem er gelöst hat, was er gebaut hat und wie er denkt [PRÜFEN · Branche, Firmengröße]. Ziel: Einladung zum Gespräch für eine Festanstellung.
@@ -14,8 +14,8 @@ Moritz arbeitet mit einem 13-Schritte-Masterprogramm (siehe ARBEITSWEISE). Ferti
 
 **Blocker vor Veröffentlichung:**
 1. `impressum.html`/`datenschutz.html` fehlen (Schritt 12).
-2. `case-fueling-calculator.html` bindet `media/moodboard-v3-radius_zugeschnitten_teil2.jpg` ein, die Datei wurde gelöscht (kaputtes Bild; eine `.webp` liegt in `media/webp/`).
-3. Sichtbare Platzhalter und Bildlücken (offene-punkte A5, A9, A14, B15–B19, C1).
+2. Case-Screens zeigen den Stand vor der Iteration (offene-punkte A17), Anzahl Testpersonen ungeklärt (A16).
+3. Sichtbare Platzhalter und Bildlücken (offene-punkte A14, B17, B18, B21, B22, C1).
 4. Repo-Hygiene: Im Repo liegen u. a. `referenzen/` (Screenshots fremder Seiten), `media/persona.jpg` (kein Nutzungsrecht), `unterlagen/altes-Portfolio/`, `konzept.md`, `offene-punkte.md`, Werkzeug-Ordner `.agents/` und `skills-lock.json` (Skills, nicht Teil der Seite) sowie `media/webp/` (Testuploads). `media/webp/moodboard-v3-radius.webp` ist bewusst nicht committet (fremde Bilder). Vor Aktivierung von Pages mit Moritz klären (`.gitignore` oder eigener Veröffentlichungsordner). Der frühere Lebenslauf mit privaten Daten ist nie committed worden, so lassen.
 
 ## ARBEITSWEISE
@@ -26,11 +26,11 @@ Moritz arbeitet mit einem 13-Schritte-Masterprogramm (siehe ARBEITSWEISE). Ferti
 - Moritz nutzt kein Terminal und öffnet Dateien per Doppelklick. Nichts installieren; fehlt ein Werkzeug, in einem Satz sagen, was er tun muss. Für Browser-Tests darf ein lokaler Server (`python -m http.server`) kurz laufen und wird danach gestoppt, weil das Vorschaufenster `file://` ohne CSS und Bilder lädt.
 - Löschen nur nach Rückfrage; Bilddateien nie löschen, wenn nur die Einbindung entfällt.
 - Git: Commit/Push nur auf Wunsch, direkt auf `main`. Autor-Adresse repo-lokal die GitHub-noreply-Adresse (`73314151+Moritz-F@users.noreply.github.com`); die globale Git-Adresse ist eine Isogon-Adresse und darf hier nicht verwendet werden. Commits enden mit der Co-Authored-By-Zeile.
-- Quellen der Wahrheit: Inhalte der Case in `referenzen/case-study-fueling-calculator.md` (Zahlen, Entscheidungen), Lebenslauf in `unterlagen/Lebenslauf_Moritz-Frommelt_final.pdf` (bereinigt, öffentlich), Konzept in `konzept.md` (teils überholt, im Zweifel gewinnt der HTML-Stand).
+- Quellen der Wahrheit: Texte der Case in `referenzen/case-study.md` (Master-Story, Kapitel von Moritz bestätigt; Abschnitte „nur Webseite" und Lesefassungen der Übergänge gelten für die Seite), Fakten und Ergänzungen (Prozess, Ideen, Designsystem der App) in `referenzen/case-study-fueling-calculator.md`, Lebenslauf in `unterlagen/Lebenslauf_Moritz-Frommelt_final.pdf` (bereinigt, öffentlich), Konzept in `konzept.md` (teils überholt, im Zweifel gewinnt der HTML-Stand).
 
 ## AUFBAU
 - `index.html`: Kopfzeile + Einstieg im Wrapper `.hero-zone` (trägt den Farbverlauf), dann `<main>`: Case Studies `#cases` (Karte Fueling Calculator mit Ziel-KPIs, Karte Second Brain als Teaser), Weitere Projekte `#weitere-projekte` (5 Kacheln mit `tile-*.png`), Über-mich-Teaser `#ueber-mich`, Kontakt `#kontakt`, Footer.
-- `case-fueling-calculator.html`: Hero, „Auf einen Blick", Kapitel `#problem` `#prozess` `#loesung` `#ki` `#designsystem` `#learnings`, Kontakt `#kontakt`. Prozess = Persona, 4 Wendepunkte (Entscheidung / Verworfen / Befund / Warum). Lösung = 3 Screens. Auf rund 7 echte Bilder gekürzt, 4 Platzhalter `[BILD FOLGT: …]`.
+- `case-fueling-calculator.html` (seit 07.11.2026 nach der Master-Story): Hero, „Auf einen Blick" mit Vorgehen in 4 Schritten (`.steps`), Kapitel 01 `#problem` · 02 `#fokus` (Segment, Persona, HMW) · 03 `#loesung` (3 Entscheidungen, Ideenwahl als `.turn`) · 04 `#kern-flow` (5 Key Screens) · 05 `#test` (Wendepunkt als `.turn`) · 06 `#impact` (Ziel-KPIs, Next Step, Learnings) · 07 `#ki` (Tabelle) · 08 `#designsystem`, Kontakt `#kontakt`. Kernaussagen als Typo-Break `.statement`. 4 Platzhalter `[BILD FOLGT: …]`.
 - `ueber-mich.html`: h1, Profiltext, Platzhalter „So arbeite ich" und „Abseits vom Design", Werdegang-Liste, 5 Werkzeuge, Lebenslauf-Download.
 - `style.css` (alles), `CNAME`, `media/` (`MF2 – …` App-Screens, `tile-*.png` 800×500 mit weißem Rand, `profil/`, `grafiken/` SVG, `fonts/` Manrope TTF, `webp/`), `unterlagen/`, `referenzen/` (Vorbilder, nur intern).
 - Nicht vorhanden: `impressum.html`, `datenschutz.html`, `case-second-brain.html`.
@@ -41,14 +41,14 @@ Moritz arbeitet mit einem 13-Schritte-Masterprogramm (siehe ARBEITSWEISE). Ferti
 - Links relativ (`index.html#cases`, `ueber-mich.html`), keine root-absoluten Pfade (Doppelklick-Test und Pages).
 - Herkunfts-Etiketten (Beleg, Befund, Entscheidung, Verworfen) nur in der Case Study. Auf der Startseite stehen Ziel-KPIs (≥ 85 % / ≥ 50 % / ≥ 70 %), klar als „Ziel-KPI, nicht gemessen" gekennzeichnet.
 - Kein klickbarer Kern-Flow in der Case Study (Wunsch). Intensität per Auswahl statt Watt war von Anfang an Moritz' Entscheidung.
-- Fakten: Fueling Calculator Einzelprojekt, 06.–10.2026; Umfrage n = 11, 3 Interviews, 4 Testpersonen; Persona ohne Foto (Illustration `grafiken/bike.svg`). Die „rund 30 %" im Problem-Kapitel haben keine Quelle (A5).
+- Fakten: Fueling Calculator Einzelprojekt, 06.–10.2026; Umfrage n = 11, 3 Interviews, Testpersonen 3 oder 4 offen (A16); Persona ohne Foto (Illustration `grafiken/bike.svg`). Die „rund 30 %" sind gestrichen.
 - Über-mich-Fließtext: bewusst die ausführlichere frühere Fassung. Dort keine Gedankenstriche im Fließtext (Datumsbereiche mit Halbgeviertstrich sind ok).
 - Kontakt: „Aktuell suche ich eine Festanstellung …", keine Zusage zur Antwortzeit.
 
 ## KONVENTIONEN (Code)
 - Keine Frameworks, kein Build, nichts von fremden Servern (keine Skripte, Schriften, Einbettungen, Cookie-Banner, Statistik).
 - Farben, Größen, Abstände nur als Variablen in `:root` von `style.css`; im restlichen CSS keine rohen Werte. Farbrollen statt Farbnamen (`--color-primary`). Neue Werte zuerst als Variable anlegen. Breakpoints 30 / 40 / 60 em.
-- Vorhandene Komponenten wiederverwenden: `.section`, `.container`, `.stack(-lg)`, `.grid--2/--3`, `.card`, `.tag` (`--decision`, `--rejected`, `--finding`, `--kpi`, `--status`), `.stage` + `.screen`, `.ph` / `.ph-img`, `.case-card` (`__content`, `__media`, `--reverse`), `.case-stats`, `.turn`, `.persona`, `.screens`, `.timeline`, `.inline-list`, `.button--primary/--secondary`, `.eyebrow`. Neue Seite = Kopfzeile, Footer und Theme-Skript von einer bestehenden Seite kopieren.
+- Vorhandene Komponenten wiederverwenden: `.section`, `.container`, `.stack(-lg)`, `.grid--2/--3`, `.card`, `.tag` (`--decision`, `--rejected`, `--finding`, `--kpi`, `--status`), `.stage` + `.screen`, `.ph` / `.ph-img`, `.case-card` (`__content`, `__media`, `--reverse`), `.case-stats`, `.statement`, `.steps`, `.data-table` (in `.table-scroll`), `.turn`, `.persona`, `.screens`, `.timeline`, `.inline-list`, `.button--primary/--secondary`, `.eyebrow`. Neue Seite = Kopfzeile, Footer und Theme-Skript von einer bestehenden Seite kopieren.
 - Qualität: semantisches HTML, eine `h1` pro Seite, keine Überschriftensprünge, Kontrast AA (4,5:1 / 3:1) in beiden Modi, sichtbarer Fokusring, Zustände nie nur über Farbe, `prefers-reduced-motion` und `prefers-reduced-transparency` beachten, mobil ab 320 px. Glas nur an Kopfzeile und Pills.
 - Bilder: `width` und `height` immer; `loading="lazy" decoding="async"` unterhalb des ersten Bildschirms, Hero-Bilder ohne `lazy`. Ziel-Format WebP (Schritt 10). Jeder Screen braucht einen Kontextsatz: Was kann man tun, warum sieht es so aus.
 - Platzhalter: `[PLATZHALTER · …]` Text, `[BILD FOLGT: …]` Bild in der Case Study (`.ph-img`), `[BELEG FEHLT]` Zahl ohne Quelle, `[PRÜFEN · …]` unsicher. TODOs zusätzlich als HTML-Kommentar im Code.
