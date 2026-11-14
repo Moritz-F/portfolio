@@ -134,16 +134,31 @@
         <h2 id="problem-titel">Die Zielwerte sind bekannt. Der Plan für den Tag fehlt.</h2>
 
         <h3>Was ist Fueling?</h3>
-        <p>Bei langen Ausdauereinheiten verbraucht der Körper vor allem Kohlenhydrate. Seine eigenen Speicher reichen bei höherer Intensität nur etwa anderthalb Stunden. Wer länger unterwegs ist, muss unterwegs nachlegen: typischerweise 60 bis 90 Gramm Kohlenhydrate pro Stunde, über Getränke, Gels, Riegel oder ganz normale Lebensmittel wie Bananen. Dieses gezielte Nachtanken heißt Fueling. Wer zu wenig aufnimmt, bricht ein. Wer zu viel oder das Falsche aufnimmt, bekommt Magenprobleme.</p>
-        <!-- TODO: Speicher-Grafik ergänzen (baut Moritz selbst) -->
+        <!-- Speicher-Grafik nach Moritz' Vorgabe (14.11.2026): Zeitstrahl 0–3:30 h, Zäsur bei 90 Min, Erklärung steht im Fließtext darunter. Spalten 3fr/4fr = 90/120 Minuten -->
         <figure class="figure">
-          <div class="ph-img">[BILD FOLGT: Speicher-Grafik – die eigenen Speicher sind nach ≈ 90 Minuten leer]</div>
+          <div class="fuel">
+            <p class="fuel__title">Der Körper hat ausreichend Energiespeicher für etwa 90&nbsp;Minuten.</p>
+            <div class="fuel__timeline">
+              <span class="fuel__cut">Speicher leer!</span>
+              <div class="fuel__seg fuel__seg--store" aria-hidden="true"></div>
+              <div class="fuel__seg fuel__seg--intake" aria-hidden="true"></div>
+              <p class="fuel__seg-label">Körpereigener Speicher <span class="muted">(reicht für ca. 90&nbsp;Min.)</span></p>
+              <p class="fuel__seg-label fuel__seg-label--intake">Erforderliche Zufuhr von außen <span class="muted">(Gels / Drinks)</span></p>
+              <span class="fuel__time">0:00</span>
+              <span class="fuel__time fuel__time--cut">1:30&nbsp;h</span>
+              <span class="fuel__time fuel__time--end">3:30&nbsp;h</span>
+            </div>
+          </div>
         </figure>
+        <p>Bei langen Ausdauereinheiten verbraucht der Körper vor allem Kohlenhydrate. Seine eigenen Speicher reichen bei höherer Intensität nur etwa anderthalb Stunden. Wer länger unterwegs ist, muss unterwegs nachlegen: typischerweise 60 bis 90 Gramm Kohlenhydrate pro Stunde, über Getränke, Gels, Riegel oder ganz normale Lebensmittel wie Bananen. Dieses gezielte Nachtanken heißt Fueling. Wer zu wenig aufnimmt, bricht ein. Wer zu viel oder das Falsche aufnimmt, bekommt Magenprobleme.</p>
 
         <h3>Warum es in der Praxis schwierig wird</h3>
         <p>Die Zielwerte kennen ambitionierte Hobby-Ausdauersportler:innen meist. Schwierig wird es, wenn daraus ein Plan für eine konkrete Einheit werden soll. Hitze, Intensität und Dauer verändern den Bedarf, und statt teurer Markenprodukte landen oft Supermarktartikel oder selbst gemischte Getränke im Gepäck, deren Kohlenhydratgehalt niemand im Kopf hat.</p>
 
-        <p class="statement">Das Problem ist nicht fehlendes Wissen. Sondern die Übersetzung in die Praxis.</p>
+        <div class="statement">
+          <span class="statement__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>Erkenntnis</span>
+          <p>Das Problem ist nicht fehlendes Wissen. Sondern die Übersetzung in die Praxis.</p>
+        </div>
 
         <div class="grid grid--2">
           <div class="card">
@@ -165,7 +180,10 @@
         <h3>Warum bestehende Tools das nicht lösen</h3>
         <p>Fueling-Rechner gibt es bereits, doch fast alle stammen von Herstellern von Sportnahrung. Sie planen überwiegend mit eigenen Produkten, und aus groben Selbsteinschätzungen werden exakte Werte, die im Ergebnis nicht mehr als Schätzung erkennbar sind. Nutzer:innen bleibt die Frage, ob die Empfehlung ihnen dient oder dem Verkauf.</p>
 
-        <p class="statement">Ein Plan hilft nur, wenn man ihm vertraut. Und Vertrauen entsteht durch Nachvollziehbarkeit.</p>
+        <div class="statement">
+          <span class="statement__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>Erkenntnis</span>
+          <p>Ein Plan hilft nur, wenn man ihm vertraut. Und Vertrauen entsteht durch Nachvollziehbarkeit.</p>
+        </div>
       </div>
     </section>
 
@@ -196,7 +214,10 @@
         <h3>Der Fokusmoment</h3>
         <p>Der Fokusmoment ist die Planung vor einer langen Radausfahrt. Rad steht stellvertretend für den Ausdauersport: Hier hatte ich den besten Zugang zu Testpersonen, und die Planung vereint viele Variablen auf einmal, nämlich lange Dauer, mehrere Flaschen und begrenzten Platz in den Trikottaschen.</p>
 
-        <p class="statement">Wie können wir Joshua bei der Planung vor langen Einheiten unterstützen, sein Wissen in die Praxis umzusetzen und Unsicherheit zu reduzieren?</p>
+        <div class="statement">
+          <span class="statement__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.7M12 17h.01"/></svg>How-might-we-Frage</span>
+          <p>Wie können wir Joshua bei der Planung vor langen Einheiten unterstützen, sein Wissen in die Praxis umzusetzen und Unsicherheit zu reduzieren?</p>
+        </div>
 
         <p>Mit dieser Frage als Anker begann die Ideation. Die erste Entscheidung ergab sich direkt aus dem Vertrauens-Insight: Die App muss markenneutral sein.</p>
       </div>
@@ -208,7 +229,10 @@
         <span class="eyebrow chapter__number">03 · Lösung und MVP</span>
         <h2 id="loesung-titel">Drei Entscheidungen, jede aus einem Insight</h2>
 
-        <p class="statement">Aus einer offenen Rechenaufgabe wird eine fertige Ansage.</p>
+        <div class="statement">
+          <span class="statement__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>Lösungsidee</span>
+          <p>Aus einer offenen Rechenaufgabe wird eine fertige Ansage.</p>
+        </div>
 
         <div class="grid grid--3">
           <article class="card stack">
@@ -316,7 +340,10 @@
           </div>
         </article>
 
-        <p class="statement">Transparenz schafft Vertrauen, aber nur, solange sie die Übersicht nicht frisst.</p>
+        <div class="statement">
+          <span class="statement__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>Erkenntnis</span>
+          <p>Transparenz schafft Vertrauen, aber nur, solange sie die Übersicht nicht frisst.</p>
+        </div>
 
         <!-- AUSGEBLENDET (hidden) auf Wunsch, bis passende Vorher/Nachher-Screens ausgewählt sind. Zum Einblenden "hidden" entfernen. -->
         <figure class="figure" hidden>
@@ -344,7 +371,10 @@
         <span class="eyebrow chapter__number">06 · Impact und Learnings</span>
         <h2 id="impact-titel">Woran sich der Erfolg messen lässt</h2>
 
-        <p class="statement">Der Plan funktioniert, wenn Nutzer:innen ihm mehr vertrauen als ihrer eigenen Schätzung.</p>
+        <div class="statement">
+          <span class="statement__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>Erfolgskriterium</span>
+          <p>Der Plan funktioniert, wenn Nutzer:innen ihm mehr vertrauen als ihrer eigenen Schätzung.</p>
+        </div>
         <p>Das lässt sich messen. Der Trust Score beobachtet, ob Nutzer:innen die Herleitung öffnen und den Plan danach übernehmen, statt ihn anzupassen oder zu verwerfen. Wer nachschaut und trotzdem übernimmt, hat die Rechnung geprüft und für plausibel befunden. Genau dieses Verhalten soll die App erzeugen.</p>
 
         <div class="card stack">
@@ -370,10 +400,6 @@
 
         <h3>Nächster Schritt: Aus Schätzungen werden Erfahrungswerte</h3>
         <p>Viele Werte im Plan sind heute noch Schätzungen, etwa Schweißrate oder Leistung. Der nächste Schritt ist deshalb ein kurzes Feedback nach der Fahrt: Hat die Verpflegung gereicht, gab es Magenprobleme? Mit jeder Fahrt kann die App ihre Schätzungen an die echte Person anpassen. Was heute noch mit ≈ markiert ist, wird mit der Zeit zum Erfahrungswert.</p>
-        <!-- TODO: Grafik "≈-Pill wird zum Erfahrungswert" ergänzen -->
-        <figure class="figure">
-          <div class="ph-img">[BILD FOLGT: Dieselbe ≈-Pill zweimal – grau mit ≈, dann als normaler Wert, dazwischen ein Pfeil „nach 5 Fahrten“]</div>
-        </figure>
         <p>Vor einer echten Umsetzung würde ich die Berechnungslogik außerdem von ernährungswissenschaftlichen Fachleuten prüfen lassen. Für ein hypothetisches Projekt war das nicht nötig, für ein Produkt, dem Menschen vertrauen sollen, schon.</p>
 
         <h3>Offene Produktfrage</h3>
@@ -391,7 +417,6 @@
           </div>
         </div>
 
-        <p class="statement">Das Wissen war immer da. Jetzt kommt es auch unterwegs an.</p>
       </div>
     </section>
 
@@ -414,7 +439,6 @@
           </table>
         </div>
         <p>Studien aus Perplexity habe ich selbst an der Quelle geprüft, die Auswertung von NotebookLM bis zur Originalaussage zurückverfolgt und danach selbst interpretiert und geclustert. Das finale Design ist in Figma entstanden.</p>
-        <p class="statement">Ich habe KI so eingesetzt, wie die App funktionieren soll: nachvollziehbar.</p>
       </div>
     </section>
 
@@ -424,23 +448,39 @@
         <span class="eyebrow chapter__number">08 · Designsystem der App</span>
         <h2 id="ds-titel">Wenige Regeln, jede mit einem Grund</h2>
         <p>Auch das Designsystem folgt dem Vertrauens-Insight: Man sieht auf einen Blick, was geschätzt ist und was man antippen kann.</p>
+        <h3>Ausgangspunkt: das Moodboard</h3>
+        <p>Bevor es Regeln gab, habe ich im Moodboard die visuelle Richtung gesucht: Farben, Typografie, Markenwerte und erste Komponenten, ergänzt um Referenzen anderer Apps. Es ist eine Ideensammlung, noch nicht das Designsystem. Die Regeln weiter unten sind daraus entstanden und haben sich im Test weiterentwickelt.</p>
         <!-- Moodboard enthält unten zwei fremde Arbeiten; auf Wunsch so eingebunden, Nutzungsrecht vor Veröffentlichung klären (offene-punkte A20) -->
         <figure class="figure">
-          <a href="media/Moodboard.jpg" target="_blank" rel="noopener">
-            <img src="media/Moodboard.jpg" width="3200" height="2360" loading="lazy" decoding="async"
-                 alt="Moodboard v3 zum Radius-System: Claim „Wissen was du brauchst“ auf Gelb, Farbpalette mit Bright Sun, Big Stone, Papier und Schätzwert-Grau, Typografie-Beispiel, Ergebnis-Karte mit 210 g, 2,1 l und 60 g/h, Markenwerte Dynamic, Precise, Honest, Bold, Komponenten wie Tabbar, Datenzeilen, Eingabefeld, Button und Fortschrittsbalken sowie zwei Referenzbilder anderer Apps">
-          </a>
-          <figcaption class="figure__caption"><strong>Moodboard v3.</strong> Hier sind Farben, Typografie, Markenwerte und die Radius-Regel entstanden. Es zeigt einen Zwischenstand: Das graue Schätzwert-Feld und das Label „GESCHÄTZT“ wurden später durch die gelbe Pill ersetzt. Zum Vergrößern anklicken.</figcaption>
+          <img src="media/Moodboard.jpg" width="3200" height="2360" loading="lazy" decoding="async"
+               alt="Moodboard v3 zum Radius-System: Claim „Wissen was du brauchst“ auf Gelb, Farbpalette mit Bright Sun, Big Stone, Papier und Schätzwert-Grau, Typografie-Beispiel, Ergebnis-Karte mit 210 g, 2,1 l und 60 g/h, Markenwerte Dynamic, Precise, Honest, Bold, Komponenten wie Tabbar, Datenzeilen, Eingabefeld, Button und Fortschrittsbalken sowie zwei Referenzbilder anderer Apps">
+          <figcaption class="figure__caption"><strong>Moodboard v3.</strong> Das graue Schätzwert-Feld wurde später durch die gelbe Pill ersetzt.</figcaption>
         </figure>
+
+        <h3>Die Regeln</h3>
         <div class="grid grid--2">
-          <div class="card stack"><h3>Farben mit Aufgabe</h3><p>Tinte gibt Struktur, Gelb hebt hervor: das Ergebnis und alles, was man antippen kann <span class="ph">[PRÜFEN · Gelb #FCDB32 (Moodboard) oder #FFE01B (Case-Datei)?]</span>.</p></div>
-          <div class="card stack"><h3>Radius nach Interaktion</h3><p>Radius 0 für alles, was man liest; voll gerundet für alles, was man antippt. So erkennt man ohne Nachdenken, was interaktiv ist.</p></div>
-          <div class="card stack"><h3>Zwei Signale</h3><p>Ein ≈ vor der Zahl heißt „geschätzt“. Die gelbe Pill mit Pfeil heißt „antippen und anpassen“. So bleibt eine Schätzung als Schätzung erkennbar, ohne dass jeder Wert einen Hinweis braucht.</p></div>
-          <div class="card stack"><h3>Typografie</h3><p>Archivo Expanded Bold für Zahlen und Überschriften, Archivo für Text.</p></div>
+          <div class="card stack"><h4>Farben mit Aufgabe</h4><p>Tinte gibt Struktur, Gelb hebt hervor: das Ergebnis und alles, was man antippen kann.</p></div>
+          <div class="card stack"><h4>Radius nach Interaktion</h4><p>Radius 0 für alles, was man liest; voll gerundet für alles, was man antippt. So erkennt man ohne Nachdenken, was interaktiv ist.</p></div>
+          <div class="card stack"><h4>Zwei Signale</h4><p>Ein ≈ vor der Zahl heißt „geschätzt“. Die gelbe Pill mit Pfeil heißt „antippen und anpassen“. So bleibt eine Schätzung als Schätzung erkennbar, ohne dass jeder Wert einen Hinweis braucht.</p></div>
+          <div class="card stack"><h4>Typografie</h4><p>Archivo Expanded Bold für Zahlen und Überschriften, Archivo für Text.</p></div>
         </div>
-        <!-- TODO: Bild "Token-Übersicht" ergänzen; das frühere Moodboard-Bild ist entfernt (Datei gelöscht, fremde Bilder) -->
+        <!-- Ausschnitte aus Figma, Seite „Designsystem“ (noch nicht final). TODO: Pill-Komponente ergänzen, sobald sie im Designsystem liegt -->
         <figure class="figure">
-          <div class="ph-img">[BILD FOLGT: Token-Übersicht – Farben mit Rolle, Radius-Regel, zwei Signale (geschätzt vs. editierbar) an einer Komponente]</div>
+          <div class="stage stage--light">
+            <img class="component-shot" src="media/designsystem/segmented-control.png" width="390" height="44" loading="lazy" decoding="async"
+                 alt="Tab-Leiste als Pill mit Übersicht aktiv, daneben Packliste, Mix und Herleitung">
+            <img class="component-shot" src="media/designsystem/button-primaer.png" width="358" height="56" loading="lazy" decoding="async"
+                 alt="Primärer Button „Weiter“, gelb und voll gerundet">
+            <img class="component-shot" src="media/designsystem/button-sekundaer.png" width="358" height="56" loading="lazy" decoding="async"
+                 alt="Sekundärer Button „Weiter“ mit Rahmen, voll gerundet">
+            <img class="component-shot" src="media/designsystem/summary-bar.png" width="358" height="54" loading="lazy" decoding="async"
+                 alt="Zusammenfassung: Gesamt 210 g Kohlenhydrate in Gelb auf dunklem Grund">
+            <img class="component-shot" src="media/designsystem/genauigkeits-meter.png" width="358" height="78" loading="lazy" decoding="async"
+                 alt="Genauigkeits-Anzeige: Genauigkeit mittel, zwei Werte sind geschätzt, Skala niedrig, mittel, hoch">
+            <img class="component-shot" src="media/designsystem/flasche-card.png" width="358" height="247" loading="lazy" decoding="async"
+                 alt="Karte Flasche 1 mit 750 ml: Datenzeilen für Maltodextrin, Fruktose, Natrium und Wasser, unten Konzentration 10,8 Prozent">
+          </div>
+          <figcaption class="figure__caption"><strong>Ausschnitte aus dem Designsystem.</strong> Was man antippt, ist voll gerundet: Tabs und Buttons. Was man liest, bleibt flach: Datenzeilen und Karten. Gelb hebt hervor, was zählt, etwa die Gesamtmenge. Das Designsystem ist noch nicht final.</figcaption>
         </figure>
       </div>
     </section>

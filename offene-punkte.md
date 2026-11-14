@@ -15,12 +15,9 @@ Sortiert nach Wichtigkeit. Zu jedem Punkt die Frage, die ihn auflöst. Erledigte
 |---|---|---|---|
 | B9 | S4 | Rolle in Teamprojekten | Das alte Portfolio nennt nur „Team-Projekt“. Was war dein Anteil bei Reise-App und SHHB? |
 | B12 | Farben | Hex-Werte aus Lebenslauf/altem Portfolio | Hast du die genauen Werte für Indigo und Lavendel aus Lebenslauf oder altem Portfolio? |
-| B13 | Case, Kapitel 08 Designsystem | Gelb-Wert | Gilt #FCDB32 (Moodboard) oder #FFE01B (Case-Datei)? |
 | B14 | Farben | Bühnenfarben Light/Dark | Im Browser prüfen (Schritt 9): passen #E3E5F3 / #2A2D55? |
 | B17 | Case, Kapitel 05 Test | Vorher/Nachher-Bild ausgeblendet | Steht im Code mit `hidden` (alte Herleitung, neue Herleitung, Sheet). Du suchst passendere Screens aus; danach `hidden` entfernen und Bildunterschrift prüfen. |
-| B18 | Case, Kapitel 08 Designsystem | Bild „Token-Übersicht“ | Farben mit Rolle, Radius-Regel, zwei Signale (geschätzt vs. editierbar) an einer Komponente. Das Moodboard-Bild ist raus (Datei gelöscht, fremde Bilder). |
-| B21 | Case, Kapitel 01 Problem | Speicher-Grafik | Baust du selbst: Die eigenen Speicher sind nach ≈ 90 Minuten leer. Einstieg mit Charakter, wenig Text. |
-| B22 | Case, Kapitel 06 Impact | Grafik „≈ wird Erfahrungswert“ | Dieselbe ≈-Pill zweimal: grau mit ≈, dann als normaler Wert, dazwischen ein Pfeil „nach 5 Fahrten“. |
+| B18 | Case, Kapitel 08 Designsystem | Ausschnitte aus Figma, vorläufig | Moritz liefert noch geeignete Figma-Exporte, die die jetzigen Ausschnitte ersetzen (Wunsch 14.11.2026); bis dahin bleibt der Stand so. Sechs Komponenten aus der Figma-Seite „Designsystem“ eingebunden (`media/designsystem/`, 1x-Exporte). Offen: Die gelbe ≈-Pill fehlt noch als Komponente im Designsystem. Die Summary-Bar ist gerundet, obwohl die Radius-Regel „was man liest, bleibt eckig“ sagt. Die Frames „Farben“ und „Komponenten“ zeigten am 14.11. über die Figma-Verbindung noch den alten Stand (Schätzwert-Grau, leere Karte). |
 | B20 | Gesamtes media/ | Schritt 10 (WebP) zurückgestellt | Auf Wunsch vertagt, solange noch Bilder ausgetauscht werden (Prototyp wird überarbeitet). Erst kurz vor Schritt 13 erledigen. |
 
 ## C · Kann vorläufig stehen bleiben
@@ -33,6 +30,8 @@ Sortiert nach Wichtigkeit. Zu jedem Punkt die Frage, die ihn auflöst. Erledigte
 | C7 | Case, Kapitel 07 KI | Gemini | Stand vorher auf der Seite, fehlt aber in der bestätigten Tabelle der Master-Story. Jetzt weggelassen. Soll Gemini wieder rein? |
 
 ## Erledigt
+- ~~B21 Speicher-Grafik~~ → als Zeitstrahl nach Moritz’ Vorgabe gebaut (0–3:30 h, Zäsur „Speicher leer!“ bei 90 Min, Zufuhr von Anfang an im Text, `.fuel`, ohne Tailwind); die PPTX vom 30.09. enthielt auf Folie 2 nur den Platzhalter (14.11.2026)
+- ~~B13 Gelb-Wert~~ → kein Farbcode auf der Seite · ~~B22 Grafik „≈ wird Erfahrungswert“~~ → weggelassen, Text reicht (14.11.2026)
 - ~~Veraltete Screens~~ → neun alte MF2-/Berechnung-Dateien aus `media/` gelöscht, `MF2 – Plan – Herleitung.jpg` bleibt als Vorher-Bild (14.11.2026)
 - ~~A18 Pill-Farbe~~ → gelb ist richtig (klickbar), die Grau-Regel im Designsystem ist verworfen; Test- und Designsystem-Text angepasst · ~~A19 Werte~~ → in Figma korrigiert, Herleitung jetzt 1,5 l; „0 von 5“ stimmt (2 × Gel) (14.11.2026)
 - ~~A16 Testpersonen~~ → vier (14.11.2026) · ~~A17 Screens~~ → finale Exporte aus `media/aktuelle Screens/` eingebunden, alte Herleitung bleibt als Vorher-Bild (14.11.2026)
