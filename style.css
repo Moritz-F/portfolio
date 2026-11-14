@@ -104,6 +104,8 @@
   --size-toggle: 2.75rem;
   --gutter: var(--space-4);
   --header-offset: 6rem;
+  --tabs-top: 5rem;
+  --height-tabs: 3.5rem;
   --width-timeline-label: 11rem;
   --width-turn-label: 13rem;
   --width-statement: 30ch;
@@ -423,6 +425,8 @@ ul { margin: 0; padding-left: var(--space-5); }
   color: var(--color-text-muted);
 }
 .eyebrow--accent { color: var(--color-primary); }
+/* Nummer vor Überzeile oder Titel, mit Abstand statt Trennzeichen */
+.label-num { margin-right: var(--space-3); }
 
 .lead { font-size: var(--text-lg); line-height: var(--leading-snug); }
 .muted { color: var(--color-text-muted); }
@@ -706,25 +710,51 @@ ul { margin: 0; padding-left: var(--space-5); }
 .glance dt { font-weight: var(--weight-extrabold); }
 .glance dd { margin: var(--space-1) 0 0; }
 
-.toc ol {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  list-style: none;
-  padding: 0;
-  margin: var(--space-3) 0 0;
+/* Kapitel-Tabs: wie Reiter an einem Papierstapel, kleben unter der Kopfzeile */
+.chapter-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--color-bg);
 }
-.toc a {
-  display: inline-block;
+@media (min-width: 60em) { .chapter-tabs { top: var(--tabs-top); } }
+.chapter-tabs__list {
+  display: flex;
+  gap: var(--space-1);
+  margin: 0;
+  padding: var(--space-3) 0 0;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+.chapter-tabs__list::-webkit-scrollbar { display: none; }
+.chapter-tabs__list li { flex: none; }
+.chapter-tabs a {
+  display: block;
+  margin-bottom: calc(var(--border-width) * -1);
   padding: var(--space-2) var(--space-4);
   font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
+  white-space: nowrap;
   text-decoration: none;
+  color: var(--color-text-muted);
+  background: var(--color-surface-tint);
   border: var(--border-width) solid var(--color-border);
-  border-radius: var(--radius-pill);
-  background: var(--color-surface);
+  border-top: var(--focus-width) solid transparent;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 }
-.toc a:hover { border-color: var(--color-primary); }
+.chapter-tabs a:hover { color: var(--color-text); }
+.chapter-tabs a[aria-current] {
+  color: var(--color-text);
+  font-weight: var(--weight-bold);
+  background: var(--color-bg);
+  border-top-color: var(--color-primary);
+  border-bottom-color: var(--color-bg);
+}
+.chapter-tabs a:focus-visible { outline-offset: calc(var(--focus-width) * -1); }
+html:has(.chapter-tabs) { scroll-padding-top: var(--height-tabs); }
+@media (min-width: 60em) { html:has(.chapter-tabs) { scroll-padding-top: calc(var(--tabs-top) + var(--height-tabs)); } }
 
 .chapter { padding-block: var(--space-7); border-top: var(--border-width) solid var(--color-border); }
 .chapter > .container > * + * { margin-top: var(--space-5); }
