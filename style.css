@@ -21,7 +21,7 @@
   --color-surface: #FFFFFF;
   --color-surface-tint: #ECEEFB;
   --color-stage: #E3E5F3;
-  --color-stage-light: #E3E5F3; /* bleibt auch im Dark Mode hell: App-Komponenten sind für hellen Grund gebaut */
+  --color-stage-light: #E3E5F3; /* App-Komponenten sind für hellen Grund gebaut; bleibt hell, falls Dark Mode zurückkommt */
   --color-text: #17173A;
   --color-text-muted: #4D4E6E;
   --color-primary: #3D3C8C;
@@ -101,7 +101,6 @@
   --width-portrait: 18rem;
   --width-avatar: 6rem;
   --size-icon: 1em;
-  --size-toggle: 2.75rem;
   --gutter: var(--space-4);
   --header-offset: 6rem;
   --tabs-top: 5rem;
@@ -118,60 +117,6 @@
   /* Bewegung */
   --duration-fast: 150ms;
   --easing: ease-out;
-}
-
-/* Farben – Dark (Systemeinstellung, solange nichts gewählt ist) */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --color-bg: #0B0B10;
-    --color-surface: #16161D;
-    --color-surface-tint: #1E1E27;
-    --color-stage: #1C1C24;
-    --color-text: #F3F3F7;
-    --color-text-muted: #A9A9B8;
-    --color-primary: #8583FF;
-    --color-on-primary: #0B0B10;
-    --color-accent: #FFB45E;
-    --color-on-accent: #17173A;
-    --color-accent-soft: #3B2B33;
-    --color-glow-accent: rgb(255 180 94 / 0.20);
-    --color-glow-primary: rgb(133 131 255 / 0.18);
-    --color-border: #2A2A35;
-    --color-placeholder: #202027;
-    --color-placeholder-text: #C9C9D2;
-    --color-placeholder-border: #5A5A66;
-    --color-glass: rgb(15 15 20 / 0.72);
-    --color-glass-border: rgb(255 255 255 / 0.14);
-    --color-shadow: rgb(0 0 0 / 0.5);
-    --shadow-glow: 0 0 32px rgb(133 131 255 / 0.35);
-  }
-}
-
-/* Farben – Dark (manuell gewählt) */
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --color-bg: #0B0B10;
-  --color-surface: #16161D;
-  --color-surface-tint: #1E1E27;
-  --color-stage: #1C1C24;
-  --color-text: #F3F3F7;
-  --color-text-muted: #A9A9B8;
-  --color-primary: #8583FF;
-  --color-on-primary: #0B0B10;
-  --color-accent: #FFB45E;
-  --color-on-accent: #17173A;
-  --color-accent-soft: #3B2B33;
-  --color-glow-accent: rgb(255 180 94 / 0.20);
-  --color-glow-primary: rgb(133 131 255 / 0.18);
-  --color-border: #2A2A35;
-  --color-placeholder: #202027;
-  --color-placeholder-text: #C9C9D2;
-  --color-placeholder-border: #5A5A66;
-  --color-glass: rgb(15 15 20 / 0.72);
-  --color-glass-border: rgb(255 255 255 / 0.14);
-  --color-shadow: rgb(0 0 0 / 0.5);
-  --shadow-glow: 0 0 32px rgb(133 131 255 / 0.35);
 }
 
 @media (min-width: 40em) {
@@ -377,28 +322,6 @@ ul { margin: 0; padding-left: var(--space-5); }
   .site-header__bar { border-radius: var(--radius-pill); flex-wrap: nowrap; }
   .site-nav { order: 0; width: auto; }
 }
-
-/* Modus-Schalter: Symbol und Text */
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--size-toggle);
-  height: var(--size-toggle);
-  padding: 0;
-  font: inherit;
-  font-size: var(--text-sm);
-  font-weight: var(--weight-semibold);
-  color: var(--color-text);
-  background: var(--color-surface-tint);
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--radius-pill);
-  cursor: pointer;
-}
-.theme-toggle svg { width: var(--size-icon); height: var(--size-icon); }
-.theme-toggle__icon-dark { display: none; }
-:root[data-theme="dark"] .theme-toggle__icon-dark { display: block; }
-:root[data-theme="dark"] .theme-toggle__icon-light { display: none; }
 
 /* Buttons */
 .button {
@@ -671,6 +594,8 @@ ul { margin: 0; padding-left: var(--space-5); }
 }
 @media (min-width: 40em) { .timeline li { grid-template-columns: var(--width-timeline-label) minmax(0, 1fr); gap: var(--space-4); } }
 .timeline time { font-size: var(--text-sm); font-weight: var(--weight-bold); color: var(--color-text-muted); }
+/* Gruppenüberschrift (h3) über einer .inline-list, eine Stufe ruhiger als h3 */
+.group-title { font-size: var(--text-base); }
 .inline-list { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; padding: 0; }
 .inline-list li {
   padding: var(--space-1) var(--space-3);

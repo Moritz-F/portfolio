@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Second Brain: Case Study von Moritz Frommelt</title>
+  <meta name="description" content="Case Study zur Bachelorarbeit: eine Notizen-App, die durch die Second-Brain-Methode führt. Research, Konzept, Prototyp, Usability-Tests und Design-System.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- Quelle aller Inhalte: Bachelorarbeit (F:\SB-Projekt\Bachelorarbeit_Moritz_Frommelt_24022025.pdf), Bilder aus F:\SB-Projekt\Anhang. Erste Fassung 16.11.2026, von Moritz noch nicht bestätigt -->
+  <div class="hero-zone">
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="site-header__name" href="index.html">Moritz Frommelt</a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html#cases">Case Studies</a></li>
+          <li><a href="index.html#weitere-projekte">Weitere Projekte</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Hero -->
+    <section class="case-hero hero" aria-labelledby="case-titel">
+      <div class="container case-hero__inner">
+        <a class="breadcrumb" href="index.html#cases"><span aria-hidden="true">←</span> Alle Cases</a>
+        <span class="eyebrow">Case Study, Bachelorarbeit</span>
+        <h1 id="case-titel">Second Brain</h1>
+        <p class="lead">Eine Notizen-App, die nicht nur speichert, sondern Schritt für Schritt durch die Second-Brain-Methode führt.</p>
+        <dl class="meta">
+          <div><dt>Rolle</dt><dd>Einzelprojekt: Research, Konzept, UX/UI-Design, Prototyp, Usability-Tests und Design-System</dd></div>
+          <!-- TODO: Startmonat der Arbeit von Moritz bestätigen lassen (offene-punkte) -->
+          <div><dt>Zeitraum</dt><dd><span class="ph">[PRÜFEN · Start]</span> bis 02.2025</dd></div>
+          <div><dt>Kontext</dt><dd>Bachelorarbeit Medieningenieur, FH Kiel, in Kooperation mit ISOGON Informationssysteme</dd></div>
+          <div><dt>Tools</dt><dd>Figma mit Material Design 3, FigJam</dd></div>
+        </dl>
+        <figure class="figure">
+          <div class="stage stage--wide">
+            <img src="media/second-brain/startseite.jpg" width="1440" height="1024"
+                 alt="Startbildschirm der Desktop-App: links die Seitenleiste mit Startseite, Neue Notiz, Suche, Favoriten, Papierkorb, Inbox mit drei Notizen und dem PARA-Bereich mit Projects, Areas, Resources und Archives; rechts zuletzt bearbeitete Notizen als Karten mit CODE-Status und Tags sowie ein gelbes Feld für eine Schnellnotiz">
+          </div>
+          <figcaption class="figure__caption">Der Startbildschirm: Links ist die PARA-Struktur schon angelegt, jede Notizkarte zeigt oben rechts, wie weit sie die vier CODE-Schritte durchlaufen hat, und eine Schnellnotiz hält Gedanken sofort nach dem Öffnen fest.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <main id="inhalt">
+
+    <!-- Auf einen Blick -->
+    <section class="container stack-lg" aria-labelledby="blick-titel">
+      <div class="glance stack-lg">
+        <div>
+          <h2 id="blick-titel">Auf einen Blick</h2>
+          <dl>
+            <div>
+              <dt>Problem</dt>
+              <dd>Die Second-Brain-Methode verspricht Entlastung beim Umgang mit Wissen. Gängige Notizen-Apps lassen Nutzer:innen bei der Umsetzung aber allein: Struktur und Arbeitsschritte müssen sie sich selbst erarbeiten. Der Aufwand frisst die Entlastung auf.</dd>
+            </div>
+            <div>
+              <dt>Lösung</dt>
+              <dd>Ein Anwendungskonzept für eine Notizen-App, in der die Methode schon eingebaut ist: eine vorgegebene PARA-Struktur, vier farbcodierte Arbeitsbereiche nach CODE und eine geführte Progressive Summarization.</dd>
+            </div>
+            <div>
+              <dt>Wichtigste Erkenntnis</dt>
+              <dd>Eine Methode wird nicht durch Erklärungen angewendet, sondern durch Führung im richtigen Moment. Im Test half ein klarer Fortschritt mehr als zusätzliche Ansichten.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="stack">
+          <h3>So bin ich vorgegangen</h3>
+          <ol class="steps">
+            <li class="steps__item">
+              <span class="eyebrow eyebrow--accent"><span class="label-num">1</span>Discover</span>
+              <p>6 Interviews, weitere Gespräche, kontextbezogene Beobachtung, Marktanalyse von 5 Notizen-Apps</p>
+            </li>
+            <li class="steps__item">
+              <span class="eyebrow eyebrow--accent"><span class="label-num">2</span>Define</span>
+              <p>User Stories, Personas, Problemdefinition in FigJam</p>
+            </li>
+            <li class="steps__item">
+              <span class="eyebrow eyebrow--accent"><span class="label-num">3</span>Develop</span>
+              <p>Scribbles, Wireframes, Klickprototypen in Figma, Usability-Tests</p>
+            </li>
+            <li class="steps__item">
+              <span class="eyebrow eyebrow--accent"><span class="label-num">4</span>Deliver</span>
+              <p>High-Fidelity-Mockups für Desktop und Mobil, Design-System mit Komponenten</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kapitel-Tabs: kleben unter der Kopfzeile, aktiver Tab per Skript am Seitenende -->
+    <nav class="chapter-tabs" aria-label="Kapitel">
+      <div class="container">
+        <ol class="chapter-tabs__list">
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#fokus">Fokus</a></li>
+          <li><a href="#loesung">Lösung</a></li>
+          <li><a href="#screens">Key Screens</a></li>
+          <li><a href="#test">Test</a></li>
+          <li><a href="#ergebnis">Ergebnis und Learnings</a></li>
+          <li><a href="#designsystem">Design-System</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- 01 · Problem -->
+    <section class="chapter" id="problem" aria-labelledby="problem-titel">
+      <div class="container">
+        <span class="eyebrow chapter__number"><span class="label-num">01</span>Das Problem</span>
+        <h2 id="problem-titel">Die Methode verspricht Entlastung. Die Umsetzung kostet zu viel.</h2>
+
+        <h3>Was ist ein Second Brain?</h3>
+        <p>Second Brain ist ein Ansatz von Tiago Forte für persönliches Wissensmanagement. Die Idee: Unser Kopf ist zum Denken da, nicht zum Speichern. Notizen, Ideen und Quellen landen deshalb in einem digitalen System, dem man vertraut. Drei Methoden tragen das Konzept:</p>
+        <div class="grid grid--3">
+          <div class="card stack">
+            <h4>PARA</h4>
+            <p>Ordnet Inhalte nicht nach Thema, sondern nach Handlungsrelevanz: Projects, Areas, Resources und Archives.</p>
+          </div>
+          <div class="card stack">
+            <h4>CODE</h4>
+            <p>Beschreibt vier Arbeitsschritte: erfassen (Capture), ordnen (Organize), verdichten (Distill) und daraus Eigenes schaffen (Express).</p>
+          </div>
+          <div class="card stack">
+            <h4>Progressive Summarization</h4>
+            <p>Verdichtet eine Notiz in Stufen: erst markieren, dann das Wichtigste hervorheben, zuletzt eine Kernaussage formulieren.</p>
+          </div>
+        </div>
+
+        <h3>Was die Research gezeigt hat</h3>
+        <p>Ich habe sechs aufgezeichnete Interviews und weitere freie Gespräche geführt, bewusst mit Menschen ohne Vorwissen zu Second Brain, aber mit viel Umgang mit Wissen in Beruf oder Alltag. Eine Person habe ich zusätzlich bei ihrer Arbeit mit Notion begleitet. Alle wollten Ideen schnell festhalten und Inhalte aus verschiedenen Quellen an einem Ort sammeln. Noch wichtiger war ihnen eine klare Struktur, um Notizen später wiederzufinden. Und mehrere beschrieben, dass sie in der Informationsflut nicht zum Wesentlichen durchdringen und gute Ideen dadurch verloren gehen.</p>
+        <p>Parallel habe ich Notion, Obsidian, OneNote, Apple Notizen und Google Notizen in der Praxis ausprobiert. In jeder dieser Apps lässt sich eine PARA-Struktur anlegen. Doch das erfordert Eigeninitiative und Wissen über die Methode, und kaum eine App unterstützt alle vier CODE-Schritte aktiv.</p>
+
+        <div class="statement">
+          <span class="statement__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>Erkenntnis</span>
+          <p>Die Apps können fast alles. Aber sie führen nicht. Wer die Methode anwenden will, muss sie selbst nachbauen.</p>
+        </div>
+
+        <h3>Warum das zum Problem wird</h3>
+        <p>Wer mit Second Brain startet, investiert zuerst: PARA anlegen, Regeln nachlesen, Details auf die eigene App übertragen. Erfassen und Ordnen gehen schnell. Verdichten und Ausdrücken dagegen brauchen Zeit und Methodenwissen. Gerade unter Zeitdruck greift man dann auf alte Gewohnheiten zurück. Dazu kommt die Unsicherheit, ob man die Methode überhaupt richtig anwendet. Die Entlastung, wegen der man angefangen hat, kommt so spät oder gar nicht.</p>
+      </div>
+    </section>
+
+    <!-- 02 · Fokus -->
+    <section class="chapter" id="fokus" aria-labelledby="fokus-titel">
+      <div class="container">
+        <span class="eyebrow chapter__number"><span class="label-num">02</span>Fokus</span>
+        <h2 id="fokus-titel">Für Menschen, die viel mit Wissen arbeiten</h2>
+        <p>Die Zielgruppe sind Wissensarbeiter:innen: Menschen, die beruflich oder privat ständig mit Informationen umgehen und dafür digitale Werkzeuge nutzen. Aus der Research sind drei neue Personas entstanden, die zwei frühere aus meinem Praktikum ergänzen. Jede steht für einen anderen Grund, ein Second Brain aufzubauen.</p>
+
+        <!-- Personas ohne Fotos: Die Persona-Grafiken im Anhang enthalten Bilder ohne geklärtes Nutzungsrecht -->
+        <div class="grid grid--3">
+          <article class="card stack">
+            <span class="eyebrow">Persona</span>
+            <h3>Lena, Lehrerin</h3>
+            <p>Arbeitet mit vielen digitalen Materialien, bereitet Unterricht vor und entwickelt eigene Abläufe. Ihr Antrieb ist ein hohes Verantwortungsbewusstsein.</p>
+          </article>
+          <article class="card stack">
+            <span class="eyebrow">Persona</span>
+            <h3>Anna, Marketing-Managerin</h3>
+            <p>Hat viel gleichzeitig im Kopf und auf der To-do-Liste, muss trotzdem kreativ sein. Sie sucht ständig nach Wegen, effektiver zu arbeiten.</p>
+          </article>
+          <article class="card stack">
+            <span class="eyebrow">Persona</span>
+            <h3>Jonas, freiberuflicher Designer</h3>
+            <p>Sammelt Inspirationen und Quellen, die ihn bei kreativer Arbeit unterstützen, und braucht sie im richtigen Moment wieder.</p>
+          </article>
+        </div>
+
+        <h3>Die Leitfrage</h3>
+        <blockquote class="quote">
+          <p>„Wie lässt sich die Anwendung der Second Brain Prinzipien innerhalb einer Notizen-App durch gezielte User Experience und User Interface Entwicklungen optimieren, sodass die Nutzergruppen effektiv ihre Ziele erreichen?“</p>
+          <footer class="muted">Forschungsfrage der Bachelorarbeit</footer>
+        </blockquote>
+
+        <h3>Zwei bewusste Eingrenzungen</h3>
+        <p>Eine Notizen-App kann einen riesigen Funktionsumfang haben. Ich habe mich deshalb auf das konzentriert, was die Methode im Alltag scheitern lässt: die Struktur nach PARA und die aufwendigen Schritte wie das Verdichten. Und ich habe mit der Desktop-Version begonnen, weil dort die meiste Zeit verbracht wird und die komplexeren Arbeitsabläufe stattfinden. Die mobile Version folgt demselben Aufbau.</p>
+      </div>
+    </section>
+
+    <!-- 03 · Lösung -->
+    <section class="chapter" id="loesung" aria-labelledby="loesung-titel">
+      <div class="container">
+        <span class="eyebrow chapter__number"><span class="label-num">03</span>Lösung</span>
+        <h2 id="loesung-titel">Die Methode ist eingebaut, nicht nur möglich</h2>
+
+        <div class="statement">
+          <span class="statement__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>Lösungsidee</span>
+          <p>Nutzer:innen sollen die Methode nicht erst lernen müssen, um von ihr zu profitieren.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card stack">
+            <span class="eyebrow">Hürde: Einstiegsaufwand</span>
+            <h3><span class="label-num">1</span>PARA ist schon angelegt</h3>
+            <p>Die vier Bereiche stehen von Anfang an in der Seitenleiste. Neue Notizen landen in der Inbox und werden per Drag and Drop einsortiert. Ein Hilfe-Button erklärt PARA dort, wo man es braucht.</p>
+          </article>
+          <article class="card stack">
+            <span class="eyebrow">Hürde: Unklare Schritte</span>
+            <h3><span class="label-num">2</span>CODE als vier Arbeitsbereiche</h3>
+            <p>Jede geöffnete Notiz hat vier Tabs: Capture, Organize, Distill und Express. Jeder Bereich hat eine eigene Farbe und zeigt nur die Werkzeuge für diesen Schritt. Eine Statusanzeige auf jeder Notiz zeigt, welche Schritte erledigt sind.</p>
+          </article>
+          <article class="card stack">
+            <span class="eyebrow">Hürde: Aufwendiges Verdichten</span>
+            <h3><span class="label-num">3</span>Geführte Verdichtung</h3>
+            <p>Die Progressive Summarization startet per Knopfdruck und führt durch ihre Stufen: markieren, hervorheben, Kernaussage schreiben, abschließen. Jeder Schritt sagt, was jetzt zu tun ist.</p>
+          </article>
+        </div>
+
+        <h3>Vom Scribble zum Konzept</h3>
+        <p>Die ersten Ideen entstanden auf Papier. Schon das Scribble legt den Grundaufbau fest, der bis zum Schluss geblieben ist: links die Navigation mit PARA, rechts oben die vier CODE-Bereiche, darunter die Notiz.</p>
+        <figure class="figure">
+          <img src="media/second-brain/scribble-distill.jpg" width="3814" height="2767" loading="lazy" decoding="async"
+               alt="Handgezeichnetes Scribble des Distill-Bereichs: links Navigation mit Neue Notiz, Startansicht, Inbox und Projekten, oben Tabs Capture, Organize, Distill und Express, darunter eigene Markierungen und Progressive Summarization mit Primary, Secondary und Summary, unten zwei Spalten mit Originalnotiz und verdichteter Notiz sowie ein Feld für die Hauptaussage">
+          <figcaption class="figure__caption"><strong>Scribble Distill.</strong> Originalnotiz und verdichtete Fassung nebeneinander, ein Regler für die Menge an Kontext. Diese Doppelansicht hat der Test später in Frage gestellt.</figcaption>
+        </figure>
+
+        <article class="turn">
+          <h3>Was bewusst nicht ausgearbeitet wurde</h3>
+          <div class="turn__row">
+            <span><span class="tag tag--decision"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Entscheidung</span></span>
+            <p>Grundlayout, PARA-Sortierung und geführte Verdichtung, weil hier die größten Hürden lagen.</p>
+          </div>
+          <div class="turn__row turn__rejected">
+            <span><span class="tag tag--rejected"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Zurückgestellt</span></span>
+            <p>Werkzeuge für den Express-Schritt, Gamification, ein ausgebautes Such- und Tagging-System und eine KI, die Texte verdichtet.</p>
+          </div>
+          <div class="turn__row">
+            <span class="eyebrow">Warum</span>
+            <p>Der Umfang einer vollständigen Notizen-App hätte die Arbeit gesprengt. Bei der KI-Verdichtung kam ein inhaltlicher Grund dazu: Sie würde den Lerneffekt nehmen, den das eigene Verdichten mit sich bringt.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 04 · Key Screens -->
+    <section class="chapter" id="screens" aria-labelledby="screens-titel">
+      <div class="container">
+        <span class="eyebrow chapter__number"><span class="label-num">04</span>Key Screens</span>
+        <h2 id="screens-titel">Vom Einsortieren bis zur Kernaussage</h2>
+        <p>Die Screens zeigen den finalen Stand nach den Usability-Tests. Gestaltet ist die App als High-Fidelity-Mockup in Figma, aufgebaut auf Material Design 3.</p>
+
+        <div class="stack-lg">
+          <figure class="figure">
+            <div class="stage stage--wide">
+              <img src="media/second-brain/inbox-para.png" width="1440" height="1024" loading="lazy" decoding="async"
+                   alt="Inbox mit PARA-Sortierung: oben vier Zielfelder Projekte, Areas, Resources und Archives mit Anzahl der Notizen und dem Hinweis Drag and Drop, um eine Notiz hinzuzufügen, daneben ein Fragezeichen-Button zur Sortierung nach Actionability; darunter zwei Notizkarten mit Griff zum Ziehen">
+            </div>
+            <figcaption class="figure__caption"><strong>Inbox und PARA-Sortierung.</strong> Neue Notizen sammeln sich in der Inbox und werden per Drag and Drop in einen der vier Bereiche gezogen. Das Fragezeichen erklärt, nach welcher Logik sortiert wird.</figcaption>
+          </figure>
+
+          <figure class="figure">
+            <div class="stage stage--wide">
+              <img src="media/second-brain/distill-schritt-1.png" width="1440" height="1024" loading="lazy" decoding="async"
+                   alt="Arbeitsbereich Distill in Blau: Kasten Progressive Verdichtung mit Fortschritt 0 Prozent und einer Schrittleiste Highlight, Bold, Summarize und Abschließen, darunter die Anweisung, die Notiz zu lesen und wichtige Abschnitte zu markieren; unten der Text einer Notiz über den Mount Everest">
+            </div>
+            <figcaption class="figure__caption"><strong>Verdichten, Schritt 1.</strong> Eine Schrittleiste zeigt den ganzen Weg, die Anweisung darunter den aktuellen Schritt: erst einmal alles markieren, was wichtig erscheint.</figcaption>
+          </figure>
+
+          <figure class="figure">
+            <div class="stage stage--wide">
+              <img src="media/second-brain/distill-kernaussage.png" width="1440" height="1024" loading="lazy" decoding="async"
+                   alt="Distill im Schritt Summarize bei 60 Prozent Fortschritt: Highlight und Bold sind abgehakt, im Text sind markierte Passagen gelb hinterlegt und das Wichtigste fett, oben ein Umschalter zwischen gesamt, Stufe 1 und 2 und Stufe 2, unten ein blaues Feld für die Kernaussage">
+            </div>
+            <figcaption class="figure__caption"><strong>Kernaussage schreiben.</strong> Erst in diesem Schritt erscheint der Umschalter für die Detailstufen. Wer die Kernaussage formuliert, kann sich nur die markierten Stellen anzeigen lassen.</figcaption>
+          </figure>
+
+          <div class="grid grid--2">
+            <figure class="figure">
+              <div class="stage stage--light">
+                <img src="media/second-brain/code-tabs.jpg" width="1162" height="378" loading="lazy" decoding="async"
+                     alt="Die Tab-Leiste in fünf Zuständen: Capture aktiv in Gelb, Organize aktiv in Grün, Distill aktiv in Blau, Express aktiv in Rot und alle inaktiv">
+              </div>
+              <figcaption class="figure__caption"><strong>CODE-Tabs.</strong> Jeder Arbeitsbereich hat eine eigene Farbe und eine Beschriftung, so ist immer klar, in welchem Schritt man gerade arbeitet.</figcaption>
+            </figure>
+            <figure class="figure">
+              <div class="stage">
+                <img class="screen" src="media/second-brain/mobil.jpg" width="400" height="852" loading="lazy" decoding="async"
+                     alt="Mobile Ansicht einer Notiz: oben die CODE-Tabs, darunter Textformatierung, Notiztext und Tags, unten eine Navigationsleiste mit PARA, Favoriten, Home, Neue Notiz und Papierkorb">
+              </div>
+              <figcaption class="figure__caption"><strong>Mobil.</strong> Die Seitenleiste wird zur Navigationsleiste am unteren Rand, PARA klappt über einen eigenen Button auf.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · Test -->
+    <section class="chapter" id="test" aria-labelledby="test-titel">
+      <div class="container">
+        <span class="eyebrow chapter__number"><span class="label-num">05</span>Test und Iteration</span>
+        <h2 id="test-titel">Verstehen Nutzer:innen die Methode, ohne sie zu kennen?</h2>
+
+        <h3>Der Test</h3>
+        <!-- TODO: Anzahl der Testpersonen steht nicht in der Arbeit, von Moritz erfragen (offene-punkte) -->
+        <p>Getestet habe ich die Klickprototypen moderiert und remote mit <span class="ph">[PRÜFEN · Anzahl]</span> Testpersonen, jeweils in ihrer gewohnten Arbeitsumgebung, mit Bildschirmaufzeichnung und lautem Denken. Drei Aufgaben standen im Mittelpunkt: sich in der App orientieren und eine Notiz öffnen, eine gespeicherte Notiz progressiv verdichten und Notizen aus der Inbox in ein Projekt einsortieren.</p>
+
+        <h3>Was funktionierte</h3>
+        <p>Das Grundlayout verstanden alle Testpersonen in kurzer Zeit, und alle Aufgaben wurden abgeschlossen. Die Verdichtung konnten alle starten oder sich die Erklärung dazu anzeigen lassen.</p>
+
+        <article class="turn">
+          <h3>Der Wendepunkt</h3>
+          <div class="turn__row">
+            <span><span class="tag tag--finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Befund</span></span>
+            <p>Beim Verdichten war nicht allen klar, dass es ein Prozess in fester Reihenfolge ist: Schritt 2 geht erst nach Schritt 1. Und die zweite Spalte mit der verdichteten Fassung irritierte, weil sie am Anfang noch gar nichts zu bieten hatte.</p>
+          </div>
+          <div class="turn__row turn__rejected">
+            <span><span class="tag tag--rejected"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Verworfen</span></span>
+            <p>Die Doppelansicht aus Original und Verdichtung von Anfang an. Sie stammt aus dem ersten Scribble, wird aber erst beim Formulieren der Kernaussage oder beim späteren Wiederöffnen einer Notiz wirklich gebraucht.</p>
+          </div>
+          <div class="turn__row">
+            <span><span class="tag tag--decision"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Entscheidung</span></span>
+            <p>Eine Spalte, dafür eine Schrittleiste mit Fortschritt in Prozent und einer kurzen Anweisung pro Schritt. Weiter geht es per Button oder direkt über die Leiste. Die Detailstufen erscheinen erst im letzten Schritt. Die Leiste macht den Ablauf sichtbar und motiviert, die Methode bis zum Ende durchzuziehen.</p>
+          </div>
+        </article>
+
+        <div class="statement">
+          <span class="statement__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>Erkenntnis</span>
+          <p>Eine Methode braucht Führung im richtigen Moment, nicht alle Informationen auf einmal.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <figure class="figure">
+            <div class="stage stage--wide">
+              <img src="media/second-brain/wireframe-distill.jpg" width="1440" height="1024" loading="lazy" decoding="async"
+                   alt="Vorher: Wireframe Distill in Graustufen mit zwei Spalten, links die Originalnotiz mit den Stufen Highlight und Bold, rechts die progressive Verdichtung mit Umschalter für die Kontextmenge">
+            </div>
+            <figcaption class="figure__caption"><strong>Vorher.</strong> Getesteter Stand mit zwei Spalten von Anfang an.</figcaption>
+          </figure>
+          <figure class="figure">
+            <div class="stage stage--wide">
+              <img src="media/second-brain/distill-schritt-1.png" width="1440" height="1024" loading="lazy" decoding="async"
+                   alt="Nachher: Distill mit einer Spalte, oben Schrittleiste mit Fortschritt und Anweisung für den aktuellen Schritt">
+            </div>
+            <figcaption class="figure__caption"><strong>Nachher.</strong> Eine Spalte, der Weg steht in der Schrittleiste.</figcaption>
+          </figure>
+        </div>
+
+        <h3>Weitere Änderungen</h3>
+        <p>In der Inbox stand im Wireframe ein Pfeil von „sehr handlungsrelevant“ bis „wenig handlungsrelevant“. Einige hielten ihn für ein Bedienelement, und ohne PARA-Vorwissen blieben die Beschriftungen unklar. Im finalen Stand übernimmt ein Hilfe-Button diese Erklärung. Außerdem verwirrte in der Seitenleiste ein Button, der zwischen Textsuche und PARA-Struktur umschaltete: Er weckte andere Erwartungen. Suche und PARA stehen jetzt getrennt untereinander.</p>
+        <figure class="figure">
+          <div class="stage stage--wide">
+            <img src="media/second-brain/wireframe-inbox.jpg" width="1440" height="1024" loading="lazy" decoding="async"
+                 alt="Vorher: Wireframe der Inbox in Graustufen, unter den vier PARA-Feldern ein Pfeil mit den Beschriftungen sehr handlungsrelevant und wenig handlungsrelevant, links ein Button Textsuche">
+          </div>
+          <figcaption class="figure__caption"><strong>Vorher.</strong> Der Pfeil unter den PARA-Feldern wurde im Test für ein Bedienelement gehalten. Den finalen Stand zeigt der Screen <a href="#screens">Inbox und PARA-Sortierung</a>.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 06 · Ergebnis und Learnings -->
+    <section class="chapter" id="ergebnis" aria-labelledby="ergebnis-titel">
+      <div class="container">
+        <span class="eyebrow chapter__number"><span class="label-num">06</span>Ergebnis und Learnings</span>
+        <h2 id="ergebnis-titel">Was das Konzept zeigt und was offen bleibt</h2>
+
+        <p>Die Tests und Gespräche mit der Zielgruppe deuten in eine klare Richtung: Wenn die Methode in die App eingebaut ist, wenden Nutzer:innen sie leichter und selbstverständlicher an. Die vorgegebene PARA-Struktur senkt den Einstiegsaufwand, die CODE-Bereiche machen die Arbeitsschritte verständlich, und die geführte Verdichtung bringt Nutzer:innen bis zu einem Ergebnis. Niemand muss mehr selbst prüfen, ob die Methode richtig angewendet wird.</p>
+
+        <div class="statement">
+          <span class="statement__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>Erfolgskriterium</span>
+          <p>Das Konzept funktioniert, wenn Nutzer:innen die Methode langfristig beibehalten, statt in alte Gewohnheiten zurückzufallen.</p>
+        </div>
+        <p>Genau das ließ sich im Rahmen der Arbeit nicht messen. Wissen aufzubauen und zu nutzen ist ein Prozess über längere Zeit. Belastbare Aussagen braucht es deshalb aus einem Langzeittest mit einer umgesetzten App.</p>
+
+        <h3>Nächster Schritt</h3>
+        <p>Die App um die fehlenden Grundfunktionen ergänzen, technisch umsetzen und dann die langfristige Nutzung untersuchen, auch mit quantitativen Daten. Design-System und Komponenten aus Figma sind dafür als Grundlage angelegt. Die Ergebnisse sollten außerdem in weitere Projekte bei ISOGON einfließen.</p>
+
+        <h3>Was ich mitnehme</h3>
+        <div class="grid grid--2">
+          <div class="card stack">
+            <h4>Fokus vor Vollständigkeit</h4>
+            <p>Die schwierigste Entscheidung war, was ich nicht ausarbeite. Ein ursprüngliches Ziel, Vorgaben für die Datenbank, habe ich dafür bewusst gestrichen.</p>
+          </div>
+          <div class="card stack">
+            <h4>Prototypen haben Grenzen</h4>
+            <p>Text markieren und formatieren lässt sich in Figma nicht echt simulieren. Mit Workarounds und einer kurzen Erklärung vor dem Test blieb die Irritation gering.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 · Design-System -->
+    <section class="chapter" id="designsystem" aria-labelledby="ds-titel">
+      <div class="container">
+        <span class="eyebrow chapter__number"><span class="label-num">07</span>Design-System</span>
+        <h2 id="ds-titel">Vorbereitet für die Übergabe an die Entwicklung</h2>
+        <p>Ein Ziel der Arbeit war, die technische Umsetzung gut vorzubereiten. Deshalb ist ein Design-System entstanden, das die Gestaltung festlegt und Entwickler:innen die Werte direkt liefert.</p>
+        <div class="grid grid--2">
+          <div class="card stack"><h3>Basis Material Design 3</h3><p>Um schnell zu Layouts und Prototypen zu kommen, habe ich auf dem offenen Design-System von Google aufgebaut und es um eigene Komponenten ergänzt.</p></div>
+          <div class="card stack"><h3>Farbe mit Aufgabe</h3><p>Eine Primärfarbe für zentrale Aktionen wie Startseite, Neue Notiz und Hilfe, dazu je eine Palette für Capture, Organize, Distill und Express in zehn Abstufungen, angelegt als lokale Styles in Figma.</p></div>
+          <div class="card stack"><h3>Komponenten</h3><p>Seitenleiste, Notiz-Vorschau mit CODE-Status, Tabs und Buttons sind als Komponenten angelegt, gruppiert und beschriftet. Für den Prototyp kamen Komponenten mit Interaktionen dazu.</p></div>
+          <div class="card stack"><h3>Kontrast im Blick</h3><p>Jede Farbstufe trägt ihren Kontrastwert zu Schwarz und Weiß. So ist sofort sichtbar, welche Kombination die Anforderungen an Lesbarkeit erfüllt.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Abschluss -->
+    <section class="section section--tint" id="kontakt" aria-labelledby="abschluss-titel">
+      <div class="container stack-lg">
+        <div class="section__head">
+          <span class="eyebrow">Kontakt</span>
+          <h2 id="abschluss-titel">Sprechen wir darüber</h2>
+        </div>
+        <p class="lead">Ich bin Moritz, UX/UI- und Product Designer aus Kiel. Wenn du über das Second-Brain-Konzept oder eine offene Stelle sprechen möchtest, schreib mir.</p>
+        <div class="contact__links">
+          <a class="button button--primary" href="mailto:mail@moritzfrommelt.de">mail@moritzfrommelt.de</a>
+          <a class="button button--secondary" href="https://www.linkedin.com/in/moritzfrommelt" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="button button--secondary" href="unterlagen/Lebenslauf_Moritz-Frommelt_final.pdf">Lebenslauf (PDF)</a>
+        </div>
+        <p><a href="case-fueling-calculator.html">Nächster Case: Fueling Calculator <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© 2026 Moritz Frommelt</p>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="unterlagen/Lebenslauf_Moritz-Frommelt_final.pdf">Lebenslauf (PDF)</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Kapitel-Tabs: markiert beim Scrollen das Kapitel, in dem man gerade liest
+    (function () {
+      var nav = document.querySelector('.chapter-tabs');
+      if (!nav) return;
+      var list = nav.querySelector('.chapter-tabs__list');
+      var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+      var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+      var current = null;
+      function update() {
+        var line = nav.getBoundingClientRect().bottom + 32; // Toleranz, damit ein angesprungenes Kapitel sicher aktiv ist
+        var active = null;
+        sections.forEach(function (section, i) {
+          if (section && section.getBoundingClientRect().top <= line) active = links[i];
+        });
+        if (active === current) return;
+        if (current) current.removeAttribute('aria-current');
+        current = active;
+        if (!current) return;
+        current.setAttribute('aria-current', 'location');
+        var left = current.offsetLeft - list.offsetLeft;
+        if (left < list.scrollLeft || left + current.offsetWidth > list.scrollLeft + list.clientWidth) {
+          list.scrollLeft = left - (list.clientWidth - current.offsetWidth) / 2;
+        }
+      }
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () { update(); ticking = false; });
+      }, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+  </script>
+</body>
+</html>
