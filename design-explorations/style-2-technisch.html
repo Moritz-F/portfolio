@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Style 2, Technisch-präzise</title>
+  <!-- Exploration: Fonts über Google Fonts, final lokal einbinden -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --ink: #0A0A0A;
+      --muted: #5E5E5E;           /* 6,4:1 auf Weiß */
+      --line: #E2E2E2;
+      --line-strong: #0A0A0A;
+      --signal: #FF4D00;          /* nur Flächen, Linien, große Zeichen */
+      --sans: "Archivo", system-ui, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+      --cols: 12;
+      --gutter: clamp(1rem, 3vw, 2.5rem);
+      --max: 90rem;
+      --t: 120ms cubic-bezier(.3, 0, 0, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1rem/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+    .mono { font: 400 .75rem/1.4 var(--mono); letter-spacing: .02em; text-transform: uppercase; }
+    .muted { color: var(--muted); }
+
+    /* Sichtbares Raster: 12 Spalten als feine Linien über die ganze Seite */
+    .frame { position: relative; max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+    .gridlines {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter);
+      display: grid; grid-template-columns: repeat(var(--cols), 1fr);
+    }
+    .gridlines span { border-left: 1px solid var(--line); }
+    .gridlines span:last-child { border-right: 1px solid var(--line); }
+    .row { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(var(--cols), 1fr); }
+    .row > * { min-width: 0; }
+
+    /* Navigation */
+    .nav { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line-strong); }
+    .nav .row { align-items: center; min-height: 3.5rem; }
+    .nav__id { grid-column: 1 / span 4; display: flex; align-items: center; gap: .6rem; text-decoration: none; font-weight: 600; padding-left: .75rem; }
+    .nav__id::before { content: ""; width: .6rem; height: .6rem; background: var(--signal); }
+    .nav ul { grid-column: 5 / -1; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
+    .nav li a { display: block; padding: 1.1rem .75rem; text-decoration: none; font: 500 .75rem/1 var(--mono); text-transform: uppercase; letter-spacing: .04em; transition: background var(--t), color var(--t); }
+    .nav li a:hover { background: var(--ink); color: var(--bg); }
+    .nav li a span { color: var(--muted); margin-right: .4em; }
+    .nav li a:hover span { color: var(--signal); }
+
+    /* Hero */
+    .hero { border-bottom: 1px solid var(--line-strong); }
+    .hero .row { padding-block: clamp(3rem, 8vw, 7rem) 0; }
+    .hero__label { grid-column: 1 / span 3; padding: 0 .75rem; }
+    .hero h1 {
+      grid-column: 1 / -1; margin: 1.5rem 0 0; padding: 0 .75rem;
+      font: 800 clamp(3rem, 10.4vw, 10rem)/.88 var(--sans); letter-spacing: -.045em; text-transform: uppercase;
+    }
+    .hero__specs { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); margin-top: clamp(2.5rem, 6vw, 5rem); border-top: 1px solid var(--line-strong); }
+    .spec { padding: 1rem .75rem 1.25rem; border-right: 1px solid var(--line); }
+    .spec:last-child { border-right: 0; }
+    .spec dt { margin-bottom: .5rem; }
+    .spec dd { margin: 0; font-weight: 500; }
+    .status { display: inline-flex; align-items: center; gap: .5rem; }
+    .status::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: var(--signal); animation: blink 1.6s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: .2; } }
+
+    /* Section-Kopf */
+    .sec { border-bottom: 1px solid var(--line-strong); }
+    .sec__head { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: baseline; padding: 2.5rem .75rem 1rem; border-bottom: 1px solid var(--line-strong); }
+    .sec__head h2 { margin: 0; font: 600 clamp(1.5rem, 2.5vw, 2rem)/1.1 var(--sans); letter-spacing: -.02em; }
+
+    /* Projektindex */
+    .index { grid-column: 1 / -1; width: 100%; border-collapse: collapse; }
+    .index th { text-align: left; font: 400 .6875rem/1 var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); padding: .9rem .75rem; border-bottom: 1px solid var(--line); }
+    .index td { padding: 1.4rem .75rem; border-bottom: 1px solid var(--line); vertical-align: top; transition: background var(--t), color var(--t); }
+    .index td.mono { padding-top: 1.65rem; }
+    .index tr.is-case td { padding-block: 2rem; }
+    .index tr.is-case td.mono { padding-top: 2.3rem; }
+    .index .title { font: 600 clamp(1.25rem, 2vw, 1.75rem)/1.15 var(--sans); letter-spacing: -.015em; }
+    .index .title a { text-decoration: none; }
+    .index .title a::after { content: ""; position: absolute; inset: 0; }   /* ganze Zeile klickbar */
+    .index tr.is-case { position: relative; cursor: pointer; }
+    .index .desc { display: block; max-width: 36em; margin-top: .4rem; color: var(--muted); font: 400 .9375rem/1.45 var(--sans); letter-spacing: 0; }
+    .index .arrow { text-align: right; font: 500 1.25rem/1 var(--mono); }
+    .index tr.is-case:hover td { background: var(--ink); color: var(--bg); }
+    .index tr.is-case:hover .desc, .index tr.is-case:hover .mono { color: #BDBDBD; }
+    .index tr.is-case:hover .arrow { color: var(--signal); transform: translateX(4px); }
+    .index tr.is-case:focus-within td { background: var(--ink); color: var(--bg); }
+    .index tr.is-case:focus-within .desc, .index tr.is-case:focus-within .mono { color: #BDBDBD; }
+    .index .arrow { transition: transform var(--t), color var(--t); }
+    .index tr.is-sub .title { font-size: 1.125rem; font-weight: 500; }
+    .index .group td { padding: 1.5rem .75rem .6rem; border-bottom: 1px solid var(--line-strong); }
+    .ph { font-family: var(--mono); font-size: .75rem; background: #FFE2D4; padding: .1em .35em; color: var(--ink); }
+
+    /* Vorschau, folgt dem Cursor (nur Desktop, Maus) */
+    .preview { position: fixed; z-index: 10; left: 0; top: 0; width: 22rem; pointer-events: none; opacity: 0; border: 1px solid var(--ink); background: var(--bg); transition: opacity 90ms linear; }
+    .preview.is-on { opacity: 1; }
+    .preview img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: top; }
+    .preview figcaption { border-top: 1px solid var(--ink); padding: .4rem .6rem; }
+
+    /* Über mich */
+    .about .row { padding-block: 0; }
+    .about__photo { grid-column: 1 / span 3; padding: 2.5rem .75rem; }
+    .about__photo img { filter: grayscale(1); aspect-ratio: 412 / 577; }
+    .about__photo .mono { margin-top: .5rem; }
+    .about__text { grid-column: 5 / span 7; padding: 2.5rem .75rem; }
+    .about__text h2 { margin: .75rem 0 1.25rem; font: 600 clamp(1.75rem, 3vw, 2.75rem)/1.05 var(--sans); letter-spacing: -.025em; }
+    .about__text p { margin: 0 0 1.5rem; max-width: 40em; }
+    .about__cv { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-strong); }
+    .about__cv div { padding: 1rem .75rem; border-right: 1px solid var(--line); }
+    .about__cv div:last-child { border-right: 0; }
+    .about__cv strong { display: block; font-weight: 500; margin-top: .35rem; }
+
+    .btn { display: inline-flex; align-items: center; gap: .75rem; padding: .85rem 1.1rem; border: 1px solid var(--ink); text-decoration: none; font: 500 .75rem/1 var(--mono); text-transform: uppercase; letter-spacing: .04em; transition: background var(--t), color var(--t); }
+    .btn:hover { background: var(--ink); color: var(--bg); }
+    .btn:hover span { color: var(--signal); }
+    .btn--solid { background: var(--ink); color: var(--bg); }
+    .btn--solid:hover { background: var(--signal); color: var(--ink); }
+    .btn--solid:hover span { color: var(--ink); }
+
+    /* Footer */
+    .footer .row { padding-block: clamp(3rem, 7vw, 5rem) 0; }
+    .footer__call { grid-column: 1 / span 8; padding: 0 .75rem; }
+    .footer__call h2 { margin: 1rem 0 1rem; font: 800 clamp(2.25rem, 5.5vw, 5rem)/.95 var(--sans); letter-spacing: -.04em; text-transform: uppercase; }
+    .footer__call p { margin: 0 0 2rem; max-width: 34em; }
+    .footer__actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .footer__base { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: clamp(3rem, 6vw, 5rem); padding: 1rem .75rem; border-top: 1px solid var(--line-strong); }
+    .footer__base ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
+    .footer__base a { text-decoration: none; }
+    .footer__base a:hover { color: var(--signal); background: var(--ink); }
+
+    @media (max-width: 60em) {
+      :root { --cols: 6; }
+      .nav__id { grid-column: 1 / -1; padding-top: .9rem; }
+      .nav ul { grid-column: 1 / -1; }
+      .hero__specs { grid-template-columns: repeat(2, 1fr); }
+      .spec:nth-child(2) { border-right: 0; }
+      .spec:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .about__photo { grid-column: 1 / span 2; }
+      .about__text { grid-column: 3 / -1; }
+      .about__cv { grid-template-columns: repeat(2, 1fr); }
+      .footer__call { grid-column: 1 / -1; }
+      .col-methods { display: none; }
+    }
+    @media (max-width: 40em) {
+      :root { --cols: 4; }
+      .nav { position: static; }
+      .nav ul { grid-template-columns: repeat(2, 1fr); }
+      .nav li a { padding: .85rem .75rem; border-top: 1px solid var(--line); }
+      .nav li a span { display: none; }
+      .hero__specs { grid-template-columns: 1fr; }
+      .spec { border-right: 0; border-bottom: 1px solid var(--line); }
+      .index thead { display: none; }
+      .index, .index tbody, .index tr, .index td { display: block; }
+      .index tr { border-bottom: 1px solid var(--line); padding: 1rem .75rem; }
+      .index td { border: 0; padding: 0 !important; }
+      .index tr.is-case td { padding: 0 !important; }
+      .index td.mono { display: inline; margin-right: .75rem; }
+      .index td.title { margin: .6rem 0 .5rem; }
+      .index .arrow { display: none; }
+      .index .col-role { display: block !important; margin-top: .75rem; }
+      .index .group { padding: 1.25rem .75rem .5rem; border-bottom: 1px solid var(--line-strong); }
+      .index tr.is-case:hover, .index tr.is-case:focus-within { background: var(--ink); color: var(--bg); }
+      .about__photo { grid-column: 1 / span 2; padding-bottom: 0; }
+      .about__text { grid-column: 1 / -1; }
+      .about__cv { grid-template-columns: 1fr; }
+      .about__cv div { border-right: 0; border-bottom: 1px solid var(--line); }
+      .preview { display: none; }
+    }
+    @media (hover: none) { .preview { display: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="gridlines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+  <header class="nav">
+    <div class="frame row">
+      <a class="nav__id" href="style-2-technisch.html">Moritz Frommelt</a>
+      <nav aria-label="Hauptnavigation" style="display:contents">
+        <ul>
+          <li><a href="#projekte"><span>01</span>Projekte</a></li>
+          <li><a href="#projekte"><span>02</span>Weitere</a></li>
+          <li><a href="#ueber"><span>03</span>Über mich</a></li>
+          <li><a href="#kontakt"><span>04</span>Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-titel">
+      <div class="frame row">
+        <p class="hero__label mono muted">Portfolio, Index</p>
+        <h1 id="hero-titel">Moritz<br>Frommelt</h1>
+        <dl class="hero__specs">
+          <div class="spec"><dt class="mono muted">Rolle</dt><dd>UX/UI &amp; Product Designer</dd></div>
+          <div class="spec"><dt class="mono muted">Ort</dt><dd>Kiel</dd></div>
+          <div class="spec"><dt class="mono muted">Spektrum</dt><dd>Von Research bis Designsystem</dd></div>
+          <div class="spec"><dt class="mono muted">Status</dt><dd class="status">Sucht Festanstellung</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="sec" id="projekte" aria-labelledby="projekte-titel">
+      <div class="frame row">
+        <div class="sec__head"><h2 id="projekte-titel">Projektindex</h2><span class="mono muted">7 Einträge</span></div>
+        <table class="index">
+          <thead>
+            <tr><th scope="col">Nr</th><th scope="col">Projekt</th><th scope="col">Jahr</th><th scope="col" class="col-role">Rolle</th><th scope="col" class="col-methods">Methoden</th><th scope="col"><span class="visually-hidden" style="position:absolute;clip:rect(0 0 0 0)">Link</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="6" class="group mono muted">Case Studies</td></tr>
+            <tr class="is-case" data-img="../media/aktuelle%20Screens/MF2%20–%20Plan%20–%20Übersicht.jpg" data-cap="Plan-Übersicht, Fueling Calculator">
+              <td class="mono muted">01</td>
+              <td class="title"><a href="../case-fueling-calculator.html">Fueling Calculator</a><span class="desc">Ein Fueling-Plan für Ausdauersportler:innen: übersetzt das g/h-Ziel in einen Packplan pro Flasche und Tasche.</span></td>
+              <td class="mono">2026</td>
+              <td class="col-role">Solo: Research, Konzept, UX/UI, Usability-Test</td>
+              <td class="col-methods mono muted">Umfrage n=11<br>3 Interviews<br>4 Testpersonen</td>
+              <td class="arrow" aria-hidden="true">→</td>
+            </tr>
+            <tr class="is-case" data-img="../media/second-brain/startseite.jpg" data-cap="Startseite, Second Brain">
+              <td class="mono muted">02</td>
+              <td class="title"><a href="../case-second-brain.html">Second Brain</a><span class="desc">Eine Notizen-App, die durch die Methode führt: PARA-Struktur, vier Arbeitsbereiche nach CODE, geführte Verdichtung.</span></td>
+              <td class="mono">2025</td>
+              <td class="col-role">Bachelorarbeit, FH Kiel, Einzelprojekt</td>
+              <td class="col-methods mono muted">6 Interviews<br>Marktanalyse 5 Apps<br>Usability-Tests</td>
+              <td class="arrow" aria-hidden="true">→</td>
+            </tr>
+            <tr><td colspan="6" class="group mono muted">Weitere Projekte</td></tr>
+            <tr class="is-sub">
+              <td class="mono muted">03</td>
+              <td class="title">Smart Home Energie Control<span class="desc">Tablet-Dashboard für Erzeugung, Eigenverbrauch und Netzeinspeisung.</span></td>
+              <td class="mono"><span class="ph">[Jahr]</span></td>
+              <td class="col-role">Tablet-App <span class="ph">[Rolle]</span></td>
+              <td class="col-methods mono muted">Dashboard</td>
+              <td></td>
+            </tr>
+            <tr class="is-sub">
+              <td class="mono muted">04</td>
+              <td class="title">App für nachhaltiges Reisen<span class="desc">CO₂-Ausstoß einer Reise je Transportmittel vergleichbar machen.</span></td>
+              <td class="mono"><span class="ph">[Jahr]</span></td>
+              <td class="col-role">Mobile App, Team</td>
+              <td class="col-methods mono muted">Umfragen<br>Interviews<br>Wireframes</td>
+              <td></td>
+            </tr>
+            <tr class="is-sub">
+              <td class="mono muted">05</td>
+              <td class="title">SHHB Digitale Jahrbücher<span class="desc">Jahrbücher des Heimatbunds, erschlossen über eine Karte der Kreise.</span></td>
+              <td class="mono"><span class="ph">[Jahr]</span></td>
+              <td class="col-role">Website, Team, technische Umsetzung</td>
+              <td class="col-methods mono muted">Konzept<br>Design<br>Umsetzung</td>
+              <td></td>
+            </tr>
+            <tr class="is-sub">
+              <td class="mono muted">06</td>
+              <td class="title">Bewässerungs-App<span class="desc">Steuerungs-App für eine Bewässerungsanlage, modulübergreifendes Projekt.</span></td>
+              <td class="mono"><span class="ph">[Jahr]</span></td>
+              <td class="col-role">Mobile App, Team</td>
+              <td class="col-methods mono muted">Papierprototyp<br>Wireframes</td>
+              <td></td>
+            </tr>
+            <tr class="is-sub">
+              <td class="mono muted">07</td>
+              <td class="title">Green Data Inbound-Tool<span class="desc">Upload-Wizard, in dem KI Dokumente ausliest und unsichere Werte markiert.</span></td>
+              <td class="mono"><span class="ph">[Jahr]</span></td>
+              <td class="col-role">Web-App, UX/UI Challenge</td>
+              <td class="col-methods mono muted">Wizard<br>UI</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="sec about" id="ueber" aria-labelledby="ueber-titel">
+      <div class="frame row">
+        <figure class="about__photo" style="margin:0">
+          <img src="../media/profil/pb_komprimiert_v3.jpg" width="412" height="577" loading="lazy" decoding="async" alt="Moritz Frommelt, lächelnd, mit verschränkten Armen vor dunklem Hintergrund">
+          <figcaption class="mono muted">Abb. 01, Portrait</figcaption>
+        </figure>
+        <div class="about__text">
+          <p class="mono muted" style="margin:0">Über mich</p>
+          <h2 id="ueber-titel">Hallo, ich bin Moritz.</h2>
+          <p>Ich bin UX-/UI-Designer aus Kiel. Angefangen habe ich mit Gestaltung: als Gestaltungstechnischer Assistent und Mediengestalter Digital, dann kam mit dem Studium zum Medieningenieur das Verständnis dafür, wie digitale Produkte entstehen. Praxis habe ich in einer Agentur und einem Softwareunternehmen gesammelt. Mich interessiert der ganze Weg: von der ersten Nutzerfrage über Konzept und Prototyp bis zum Interface, das im Test besteht.</p>
+          <a class="btn" href="../ueber-mich.html">Mehr über mich <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="about__cv">
+          <div><span class="mono muted">2026</span><strong>Weiterbildung Product Design, Digitale Leute</strong></div>
+          <div><span class="mono muted">2024–2025</span><strong>Isogon Informationssysteme, UX-Design</strong></div>
+          <div><span class="mono muted">2019–2025</span><strong>B.Eng. Medieningenieur, FH Kiel</strong></div>
+          <div><span class="mono muted">2017–2019</span><strong>Mediengestalter Digital und Print</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="kontakt">
+    <div class="frame row">
+      <div class="footer__call">
+        <p class="mono muted">Kontakt</p>
+        <h2>Lass uns sprechen</h2>
+        <p>Aktuell suche ich eine Festanstellung als UX/UI- oder Product Designer. Schreib mir.</p>
+        <div class="footer__actions">
+          <a class="btn btn--solid" href="mailto:mail@moritzfrommelt.de">mail@moritzfrommelt.de <span aria-hidden="true">→</span></a>
+          <a class="btn" href="https://www.linkedin.com/in/moritzfrommelt" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="btn" href="../unterlagen/Lebenslauf_Moritz-Frommelt_final.pdf">Lebenslauf PDF <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="footer__base mono muted">
+        <span>© 2026 Moritz Frommelt</span>
+        <ul><li><a href="../datenschutz.html">Datenschutz</a></li></ul>
+      </div>
+    </div>
+  </footer>
+
+  <figure class="preview" aria-hidden="true"><img alt="" src="" width="400" height="300"><figcaption class="mono"></figcaption></figure>
+
+  <script>
+    const pv = document.querySelector('.preview'), pvImg = pv.querySelector('img'), pvCap = pv.querySelector('figcaption');
+    const fine = matchMedia('(hover: hover) and (min-width: 40em)');
+    document.querySelectorAll('tr.is-case').forEach(tr => {
+      tr.addEventListener('mouseenter', () => { if (!fine.matches) return; pvImg.src = tr.dataset.img; pvCap.textContent = tr.dataset.cap; pv.classList.add('is-on'); });
+      tr.addEventListener('mouseleave', () => pv.classList.remove('is-on'));
+      tr.addEventListener('mousemove', e => { const x = Math.min(e.clientX + 24, innerWidth - pv.offsetWidth - 16), y = Math.max(16, Math.min(e.clientY - 120, innerHeight - pv.offsetHeight - 16)); pv.style.transform = `translate(${x}px, ${y}px)`; });
+    });
+  </script>
+</body>
+</html>

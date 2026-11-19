@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Style 3, Druckerei Riso</title>
+  <!-- Exploration: Fonts über Google Fonts, final lokal einbinden -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F3EEE2;
+      --pink: #FF48B0;            /* Riso Fluorescent Pink: nur Flächen */
+      --blue: #2B4FA2;            /* Riso Medium Blue: Text, 7:1 auf --paper */
+      --ink: #1E2A4F;             /* Blau überdruckt, Fließtext */
+      --display: "Bricolage Grotesque", system-ui, sans-serif;
+      --text: "Instrument Sans", system-ui, sans-serif;
+      --gutter: clamp(1rem, 4vw, 3rem);
+      --max: 84rem;
+      --mis: 4px;                 /* Passerversatz */
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.6 var(--text); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+    /* Körnung über allem, multipliziert wie Papierstruktur */
+    .grain {
+      position: fixed; inset: -50%; pointer-events: none; z-index: 50; opacity: .35; mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .5 0 0 0 0 .45 0 0 0 1.1 -.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* Duoton: Graustufen auf Blau (Tiefen), Pink (Mitten), Papier (Lichter) */
+    .duo { filter: url(#duotone); }
+
+    /* Zwei Druckplatten: Pink liegt unten, Blau darüber, beide multipliziert */
+    .plates { position: relative; display: inline-block; }
+    .plates__pink { position: absolute; inset: 0; color: var(--pink); mix-blend-mode: multiply; transform: translate(calc(var(--mis) * 1.5), var(--mis)); transition: transform .25s cubic-bezier(.3,1.6,.5,1); }
+    .plates__blue { position: relative; color: var(--blue); mix-blend-mode: multiply; }
+    a:hover .plates__pink, .plates:hover .plates__pink { transform: translate(calc(var(--mis) * -2), calc(var(--mis) * 1.5)); }
+
+    /* Navigation */
+    .nav { padding-block: 1.25rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .nav__id { font: 800 1.25rem/1 var(--display); text-decoration: none; color: var(--blue); }
+    .nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: .5rem; flex-wrap: wrap; }
+    .nav li a { display: block; padding: .45rem .9rem; border: 2px solid var(--blue); border-radius: 999px; text-decoration: none; font-weight: 600; font-size: .9375rem; color: var(--blue); background: var(--paper); box-shadow: 3px 3px 0 var(--pink); transition: transform .18s, box-shadow .18s; }
+    .nav li a:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--pink); }
+
+    /* Hero */
+    .hero { position: relative; padding-block: clamp(2.5rem, 7vw, 6rem) clamp(3rem, 8vw, 7rem); overflow: hidden; }
+    .hero__dot { position: absolute; right: clamp(-6rem, -4vw, -2rem); top: clamp(1rem, 4vw, 3rem); width: clamp(13rem, 38vw, 34rem); aspect-ratio: 1; border-radius: 50%; background: var(--pink); mix-blend-mode: multiply; }
+    .hero__bar { position: absolute; left: 0; bottom: clamp(.5rem, 2vw, 1.5rem); width: 62%; height: clamp(1rem, 2vw, 1.75rem); background: var(--blue); opacity: .9; mix-blend-mode: multiply; transform: rotate(-2deg); transform-origin: left; }
+    .hero__label { position: relative; display: inline-block; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .8125rem; color: var(--blue); margin: 0 0 1.25rem; }
+    .hero h1 { position: relative; margin: 0; font: 800 clamp(3.5rem, 14vw, 13rem)/.84 var(--display); letter-spacing: -.045em; }
+    .hero__pos { position: relative; max-width: 30em; margin: clamp(2rem, 4vw, 3rem) 0 0; font: 500 clamp(1.25rem, 2.3vw, 1.75rem)/1.3 var(--display); color: var(--ink); }
+    .hero__pos mark { background: none; color: inherit; box-shadow: inset 0 -.45em 0 color-mix(in srgb, var(--pink) 55%, transparent); }
+
+    /* Sektionen */
+    .section { padding-block: clamp(4rem, 9vw, 8rem); }
+    .sec-title { margin: 0 0 clamp(2.5rem, 5vw, 4rem); font: 800 clamp(2.5rem, 7vw, 5.5rem)/.9 var(--display); letter-spacing: -.035em; }
+    .sec-label { display: block; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .8125rem; color: var(--blue); margin-bottom: .75rem; }
+
+    /* Case Studies */
+    .cases { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(3rem, 6vw, 5rem) clamp(1rem, 2.5vw, 2rem); }
+    .case { position: relative; grid-column: span 6; }
+    .case:nth-child(2) { margin-top: clamp(0rem, 10vw, 9rem); }
+    .case__print { position: relative; display: block; text-decoration: none; }
+    .case__print::before { content: ""; position: absolute; inset: 0; background: var(--pink); mix-blend-mode: multiply; transform: translate(10px, 10px); transition: transform .25s cubic-bezier(.3,1.6,.5,1); }
+    .case__print:hover::before { transform: translate(-8px, 14px) rotate(-1deg); }
+    .case__img { position: relative; background: var(--paper); aspect-ratio: 4 / 3; overflow: hidden; border: 2px solid var(--blue); }
+    .case__img img { width: 100%; height: 100%; object-fit: cover; object-position: top; mix-blend-mode: multiply; }
+    .case__img--phone { display: grid; place-items: end center; }
+    .case__img--phone img { width: 52%; height: auto; transform: translateY(18%); }
+    .case__num { position: absolute; z-index: 2; top: -1.5rem; left: -.5rem; font: 800 4.5rem/1 var(--display); }
+    .case h3 { margin: 1.75rem 0 .75rem; font: 800 clamp(1.75rem, 3vw, 2.5rem)/1 var(--display); letter-spacing: -.02em; color: var(--blue); }
+    .case h3 a { text-decoration: none; }
+    .case p { margin: 0 0 1rem; max-width: 34em; }
+    .chips { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1.25rem; padding: 0; }
+    .chips li { font-size: .8125rem; font-weight: 600; padding: .2rem .65rem; border: 1.5px solid var(--blue); border-radius: 999px; color: var(--blue); }
+    .more { font-weight: 600; color: var(--blue); text-decoration-thickness: 2px; text-underline-offset: .25em; text-decoration-color: var(--pink); }
+
+    /* Weitere Projekte: Druckbogen mit Streifen */
+    .others { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: 2rem 1.5rem; list-style: none; margin: 0; padding: 0; }
+    .other img { aspect-ratio: 8 / 5; object-fit: cover; border: 2px solid var(--blue); margin-bottom: .9rem; mix-blend-mode: multiply; transition: transform .2s; }
+    .other:nth-child(odd) img { transform: rotate(-1.2deg); }
+    .other:nth-child(even) img { transform: rotate(1deg); }
+    .other:hover img { transform: rotate(0) translate(-3px, -3px); }
+    .other .tag { font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--blue); }
+    .other h3 { margin: .2rem 0 .35rem; font: 800 1.375rem/1.1 var(--display); color: var(--blue); }
+    .other p { margin: 0; font-size: .9375rem; }
+
+    /* Über mich */
+    .about { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; align-items: center; }
+    .about__photo { grid-column: 1 / span 5; position: relative; margin: 0; }
+    .about__photo::before { content: ""; position: absolute; inset: 6% -7% -7% 8%; background: var(--pink); mix-blend-mode: multiply; transform: rotate(3deg); }
+    .about__photo img { position: relative; }
+    .about__text { grid-column: 7 / span 6; }
+    .about__text p { max-width: 36em; }
+
+    /* Footer */
+    .footer { position: relative; overflow: hidden; background: var(--blue); color: var(--paper); padding-block: clamp(4rem, 9vw, 7rem) 2rem; }
+    .footer::before { content: ""; position: absolute; width: clamp(16rem, 40vw, 34rem); aspect-ratio: 1; border-radius: 50%; background: var(--pink); left: -8%; bottom: -40%; mix-blend-mode: multiply; }
+    .footer .wrap { position: relative; }
+    .footer h2 { margin: 0 0 1.25rem; font: 800 clamp(2.75rem, 9vw, 8rem)/.85 var(--display); letter-spacing: -.045em; }
+    .footer p { max-width: 32em; margin: 0 0 2rem; font-size: 1.125rem; }
+    .footer__mail { display: inline-block; font: 800 clamp(1.25rem, 3.4vw, 2.5rem)/1.1 var(--display); color: var(--paper); text-decoration: none; background: var(--ink); padding: .35em .55em; box-shadow: 6px 6px 0 var(--pink); transition: transform .18s, box-shadow .18s; overflow-wrap: anywhere; }
+    .footer__mail:hover { transform: translate(-3px, -3px); box-shadow: 10px 10px 0 var(--pink); }
+    .footer__base { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: clamp(3rem, 7vw, 5rem); padding-top: 1rem; border-top: 2px dashed color-mix(in srgb, var(--paper) 55%, transparent); font-size: .9375rem; }
+    .footer__base ul { list-style: none; display: flex; gap: 1.25rem; flex-wrap: wrap; margin: 0; padding: 0; }
+    .footer :focus-visible { outline-color: var(--paper); }
+
+    @media (max-width: 60em) {
+      .case { grid-column: 1 / -1; }
+      .case:nth-child(2) { margin-top: 0; }
+      .about__photo { grid-column: 1 / span 6; }
+      .about__text { grid-column: 1 / -1; }
+    }
+    @media (max-width: 40em) {
+      .about__photo { grid-column: 1 / span 9; }
+      .hero__bar { width: 85%; }
+      .case__num { font-size: 3.5rem; top: -1.25rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="duotone" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues=".169 1 .953"/>
+        <feFuncG type="table" tableValues=".310 .282 .933"/>
+        <feFuncB type="table" tableValues=".635 .690 .886"/>
+      </feComponentTransfer>
+    </filter>
+  </svg>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="wrap nav">
+    <a class="nav__id" href="style-3-riso.html">Moritz Frommelt</a>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#projekte">Case Studies</a></li>
+        <li><a href="#weitere">Weitere Projekte</a></li>
+        <li><a href="#ueber">Über mich</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-titel">
+      <span class="hero__dot" aria-hidden="true"></span>
+      <span class="hero__bar" aria-hidden="true"></span>
+      <div class="wrap">
+        <p class="hero__label">UX/UI &amp; Product Designer aus Kiel</p>
+        <h1 id="hero-titel"><span class="plates"><span class="plates__pink" aria-hidden="true">Moritz<br>Frommelt</span><span class="plates__blue">Moritz<br>Frommelt</span></span></h1>
+        <p class="hero__pos">Von Research bis Designsystem, mit <mark>Blick für Details</mark> und Freude an guten Lösungen.</p>
+      </div>
+    </section>
+
+    <section class="section" id="projekte" aria-labelledby="projekte-titel">
+      <div class="wrap">
+        <span class="sec-label">Case Studies</span>
+        <h2 class="sec-title" id="projekte-titel"><span class="plates"><span class="plates__pink" aria-hidden="true">Ausgewählte Projekte</span><span class="plates__blue">Ausgewählte Projekte</span></span></h2>
+        <div class="cases">
+          <article class="case">
+            <a class="case__print" href="../case-fueling-calculator.html" tabindex="-1" aria-hidden="true">
+              <span class="case__num"><span class="plates"><span class="plates__pink">01</span><span class="plates__blue">01</span></span></span>
+              <div class="case__img case__img--phone"><img class="duo" src="../media/aktuelle%20Screens/MF2%20–%20Plan%20–%20Übersicht.jpg" width="390" height="844" loading="lazy" decoding="async" alt=""></div>
+            </a>
+            <h3><a href="../case-fueling-calculator.html">Fueling Calculator</a></h3>
+            <ul class="chips"><li>Mobile App</li><li>Einzelprojekt</li><li>2026</li></ul>
+            <p>Viele Ausdauersportler:innen kennen ihr g/h-Ziel, wissen aber nicht, was sie konkret einpacken sollen. Der Fueling Calculator übersetzt die Theorie in einen Packplan pro Flasche und Tasche: markenneutral und transparent darüber, was geschätzt ist.</p>
+            <a class="more" href="../case-fueling-calculator.html">Case Study lesen</a>
+          </article>
+          <article class="case">
+            <a class="case__print" href="../case-second-brain.html" tabindex="-1" aria-hidden="true">
+              <span class="case__num"><span class="plates"><span class="plates__pink">02</span><span class="plates__blue">02</span></span></span>
+              <div class="case__img"><img class="duo" src="../media/second-brain/startseite.jpg" width="1440" height="1024" loading="lazy" decoding="async" alt=""></div>
+            </a>
+            <h3><a href="../case-second-brain.html">Second Brain</a></h3>
+            <ul class="chips"><li>Bachelorarbeit</li><li>FH Kiel</li><li>2025</li></ul>
+            <p>Die Second-Brain-Methode verspricht Entlastung, doch gängige Notizen-Apps lassen Nutzer:innen mit der Umsetzung allein. Mein Konzept baut die Methode direkt ein: vorgegebene PARA-Struktur, vier Arbeitsbereiche nach CODE und eine geführte Verdichtung.</p>
+            <a class="more" href="../case-second-brain.html">Case Study lesen</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="weitere" aria-labelledby="weitere-titel" style="padding-top:0">
+      <div class="wrap">
+        <span class="sec-label">Weitere Projekte</span>
+        <h2 class="sec-title" id="weitere-titel" style="font-size:clamp(2rem,5vw,3.75rem)">Was sonst noch entstanden ist</h2>
+        <ul class="others">
+          <li class="other"><img class="duo" src="../media/tile-smart-home-energie.png" width="800" height="500" loading="lazy" decoding="async" alt="Tablet-Dashboard „Energie Dashboard“ mit Kacheln zu Erzeugung, Verbrauch, Speicher und Netzeinspeisung"><span class="tag">Tablet-App</span><h3>Smart Home Energie Control</h3><p>Erzeugung, Eigenverbrauch und Netzeinspeisung auf einen Blick.</p></li>
+          <li class="other"><img class="duo" src="../media/tile-reise-app.png" width="800" height="500" loading="lazy" decoding="async" alt="Drei Screens der Reise-App: CO₂-Rechner, Auswahl des Transportmittels, Startseite"><span class="tag">Mobile App</span><h3>Nachhaltiges Reisen</h3><p>CO₂-Ausstoß je Transportmittel vergleichbar machen. Im Team erarbeitet.</p></li>
+          <li class="other"><img class="duo" src="../media/tile-shhb-jahrbuecher.png" width="800" height="500" loading="lazy" decoding="async" alt="Startseite der SHHB-Jahrbücher-Website mit klickbarer Karte der Kreise Schleswig-Holsteins"><span class="tag">Website</span><h3>SHHB Digitale Jahrbücher</h3><p>Jahrbücher über eine Karte der Kreise erschließen. Umsetzung bei mir.</p></li>
+          <li class="other"><img class="duo" src="../media/tile-bewaesserung-app.png" width="800" height="500" loading="lazy" decoding="async" alt="Zwei Wireframe-Screens der Bewässerungs-App EasyWater"><span class="tag">Mobile App</span><h3>Bewässerungs-App</h3><p>Vom Papierprototyp bis zum Wireframe.</p></li>
+          <li class="other"><img class="duo" src="../media/tile-green-data.png" width="800" height="500" loading="lazy" decoding="async" alt="Upload-Wizard von Green Data, Schritt 2 von 4"><span class="tag">Web-App, Challenge</span><h3>Green Data Inbound-Tool</h3><p>KI liest Dokumente aus und markiert unsichere Werte.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="ueber" aria-labelledby="ueber-titel" style="padding-top:0">
+      <div class="wrap about">
+        <figure class="about__photo">
+          <img class="duo" src="../media/profil/pb_komprimiert_v3.jpg" width="412" height="577" loading="lazy" decoding="async" alt="Moritz Frommelt, lächelnd, mit verschränkten Armen">
+        </figure>
+        <div class="about__text">
+          <span class="sec-label">Über mich</span>
+          <h2 class="sec-title" id="ueber-titel" style="margin-bottom:1.5rem"><span class="plates"><span class="plates__pink" aria-hidden="true">Hallo, ich bin Moritz.</span><span class="plates__blue">Hallo, ich bin Moritz.</span></span></h2>
+          <p>Ich bin UX-/UI-Designer aus Kiel. Angefangen habe ich mit Gestaltung: als Gestaltungstechnischer Assistent und Mediengestalter Digital, dann kam mit dem Studium zum Medieningenieur das Verständnis dafür, wie digitale Produkte entstehen. Praxis habe ich in einer Agentur und einem Softwareunternehmen gesammelt. Mich interessiert der ganze Weg: von der ersten Nutzerfrage über Konzept und Prototyp bis zum Interface, das im Test besteht.</p>
+          <p><a class="more" href="../ueber-mich.html">Mehr über mich</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="kontakt">
+    <div class="wrap">
+      <h2>Lass uns sprechen</h2>
+      <p>Aktuell suche ich eine Festanstellung als UX/UI- oder Product Designer. Schreib mir.</p>
+      <a class="footer__mail" href="mailto:mail@moritzfrommelt.de">mail@moritzfrommelt.de</a>
+      <div class="footer__base">
+        <span>© 2026 Moritz Frommelt</span>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/moritzfrommelt" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="../unterlagen/Lebenslauf_Moritz-Frommelt_final.pdf">Lebenslauf (PDF)</a></li>
+          <li><a href="../datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
